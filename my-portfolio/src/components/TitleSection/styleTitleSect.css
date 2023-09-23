@@ -1,0 +1,50 @@
+.backgroundTitle {
+  background-size: cover;
+  background-image: url("../../assets/images/foto-3.jpg");
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titleDiv {
+  display: flex;
+  height: 500px;
+  width: 70%;
+}
+
+.textDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  margin-left: 2rem;
+}
+
+.titleBlue {
+  color: #64ccc5;
+  font-size: 40pt;
+}
+
+.titleWhite {
+  color: #eee;
+  background-color: #053b50;
+  width: 400px;
+  margin-left: -17rem;
+  text-align: end;
+  font-size: 40pt;
+}
+
+.titleJob {
+  color: #eee;
+  font-size: 30pt;
+  font-style: italic;
+}
+
+.imgDiv {
+  width: 50%;
+  background-image: url("../../assets/images/titleBackground-not-bg.png");
+  background-size: cover;
+  filter: brightness(80%) saturate(100%) hue-rotate(310deg) sepia(0%) invert(0%)
+    opacity(100%) drop-shadow(60px 60px 50px #f22067);
+}
