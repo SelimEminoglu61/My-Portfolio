@@ -1,0 +1,14 @@
+.experienceDiv {
+  background-color: #176b87;
+  border-radius: 10px;
+}
+
+.expTitle {
+  display: flex;
+  justify-content: center;
+}
+
+.expTitle > h3 {
+  color: #eee;
+  font-size: 32pt;
+}
