@@ -1,6 +1,6 @@
 .background {
   background-image: url("../assets/images/foto-1.jpg");
   background-size: cover;
-  background-attachment: fixed;
+  background-position: center;
   min-height: 100vh;
 }
