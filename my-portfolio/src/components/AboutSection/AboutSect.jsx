@@ -5,7 +5,7 @@ function AboutSect() {
   return (
     <div className="container">
       <div className="aboutDiv">
-        <div className="aboutTitle">
+        <div className="midTitleDiv">
           <h3>About Me</h3>
         </div>
         <div className="aboutDetail">

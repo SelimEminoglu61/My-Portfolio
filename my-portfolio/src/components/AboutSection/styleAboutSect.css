@@ -4,16 +4,6 @@
   background-color: #64ccc5;
 }
 
-.aboutTitle {
-  display: flex;
-  justify-content: center;
-}
-
-.aboutTitle > h3 {
-  font-size: 32pt;
-  color: #eee;
-}
-
 .aboutDetail {
   display: flex;
   justify-content: center;

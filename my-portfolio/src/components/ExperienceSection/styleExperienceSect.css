@@ -3,16 +3,6 @@
   border-radius: 10px;
 }
 
-.expTitle {
-  display: flex;
-  justify-content: center;
-}
-
-.expTitle > h3 {
-  color: #eee;
-  font-size: 32pt;
-}
-
 .expList {
   display: flex;
   flex-direction: column;

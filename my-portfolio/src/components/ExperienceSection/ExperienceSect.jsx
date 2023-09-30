@@ -5,7 +5,7 @@ function ExperienceSect() {
   return (
     <div className="container">
       <div className="experienceDiv">
-        <div className="expTitle">
+        <div className="midTitleDiv">
           <h3>Experiences</h3>
         </div>
         <ul className="expList">

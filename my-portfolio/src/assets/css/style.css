@@ -9,3 +9,13 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+.midTitleDiv {
+  display: flex;
+  justify-content: center;
+}
+
+.midTitleDiv > h3 {
+  font-size: 32pt;
+  color: #eee;
+}
