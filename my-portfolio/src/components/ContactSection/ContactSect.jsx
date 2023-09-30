@@ -1,5 +1,6 @@
 import "./styleContactSect.css";
 import "../../assets/css/style.css";
+import Form from "../../views/Form/Form";
 
 function ContactSect() {
   return (
@@ -33,6 +34,7 @@ function ContactSect() {
             </a>
           </li>
         </ul>
+        <Form />
       </div>
     </div>
   );
