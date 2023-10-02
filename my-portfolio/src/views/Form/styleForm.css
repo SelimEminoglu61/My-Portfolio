@@ -1,6 +1,40 @@
 form {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   border: 3px solid #eee;
   border-radius: 10px;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  gap: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+form > h3 {
+  text-align: center;
+}
+
+form > div {
+  margin-left: 4rem;
+}
+
+.nameInput {
+  width: 50%;
+}
+
+.messageDiv {
+  display: flex;
+}
+
+.submitBtn {
+  width: 100px;
+  height: 30px;
+  background-color: #eee;
+  color: #053b50;
+  margin-right: auto;
+  margin-left: auto;
+  cursor: pointer;
 }
