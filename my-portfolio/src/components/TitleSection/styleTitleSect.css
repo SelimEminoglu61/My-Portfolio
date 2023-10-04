@@ -45,6 +45,46 @@
   width: 50%;
   background-image: url("../../assets/images/titleBackground-not-bg.png");
   background-size: cover;
-  filter: brightness(80%) saturate(100%) hue-rotate(310deg) sepia(0%) invert(0%)
-    opacity(100%) drop-shadow(60px 60px 50px #f22067);
+  animation-name: blur-radius;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blur-radius {
+  0% {
+    filter: brightness(80%) saturate(100%) hue-rotate(310deg) sepia(0%)
+      invert(0%) opacity(100%) drop-shadow(60px 60px 50px #f22067);
+  }
+  15% {
+    filter: brightness(80%) saturate(100%) hue-rotate(310deg) sepia(0%)
+      invert(0%) opacity(100%) drop-shadow(60px 60px 80px #f22067);
+  }
+  25% {
+    filter: brightness(80%) saturate(100%) hue-rotate(310deg) sepia(0%)
+      invert(0%) opacity(100%) drop-shadow(60px 60px 110px #f22067);
+  }
+  35% {
+    filter: brightness(80%) saturate(100%) hue-rotate(310deg) sepia(0%)
+      invert(0%) opacity(100%) drop-shadow(60px 60px 140px #f22067);
+  }
+  50% {
+    filter: brightness(80%) saturate(100%) hue-rotate(310deg) sepia(0%)
+      invert(0%) opacity(100%) drop-shadow(60px 60px 180px #f22067);
+  }
+  65% {
+    filter: brightness(80%) saturate(100%) hue-rotate(310deg) sepia(0%)
+      invert(0%) opacity(100%) drop-shadow(60px 60px 140px #f22067);
+  }
+  75% {
+    filter: brightness(80%) saturate(100%) hue-rotate(310deg) sepia(0%)
+      invert(0%) opacity(100%) drop-shadow(60px 60px 110px #f22067);
+  }
+  85% {
+    filter: brightness(80%) saturate(100%) hue-rotate(310deg) sepia(0%)
+      invert(0%) opacity(100%) drop-shadow(60px 60px 80px #f22067);
+  }
+  100% {
+    filter: brightness(80%) saturate(100%) hue-rotate(310deg) sepia(0%)
+      invert(0%) opacity(100%) drop-shadow(60px 60px 50px #f22067);
+  }
 }
