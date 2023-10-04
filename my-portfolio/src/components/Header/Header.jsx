@@ -1,3 +1,4 @@
+import { Link } from "react-scroll";
 import "./styleHeader.css";
 
 function Header() {
@@ -8,10 +9,30 @@ function Header() {
       </div>
       <div className="navbar">
         <ul className="navbarList">
-          <li>Home</li>
-          <li>About</li>
-          <li>Experience</li>
-          <li>Contact</li>
+          <Link to="home" spy={true} smooth={true} duration={500} offset={-70}>
+            <li>Home</li>
+          </Link>
+          <Link to="about" spy={true} smooth={true} duration={500} offset={-90}>
+            <li>About</li>
+          </Link>
+          <Link
+            to="experience"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={-90}
+          >
+            <li>Experience</li>
+          </Link>
+          <Link
+            to="contact"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={-90}
+          >
+            <li>Contact</li>
+          </Link>
         </ul>
       </div>
     </div>

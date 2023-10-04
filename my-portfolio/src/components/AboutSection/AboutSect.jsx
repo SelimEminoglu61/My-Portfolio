@@ -4,7 +4,7 @@ import "../../assets/css/style.css";
 function AboutSect() {
   return (
     <div className="container">
-      <div className="aboutDiv">
+      <div className="aboutDiv" id="about">
         <div className="midTitleDiv">
           <h3>About Me</h3>
         </div>

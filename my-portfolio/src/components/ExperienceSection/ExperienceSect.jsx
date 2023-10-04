@@ -4,7 +4,7 @@ import "../../assets/css/style.css";
 function ExperienceSect() {
   return (
     <div className="container">
-      <div className="experienceDiv">
+      <div className="experienceDiv" id="experience">
         <div className="midTitleDiv">
           <h3>Experiences</h3>
         </div>

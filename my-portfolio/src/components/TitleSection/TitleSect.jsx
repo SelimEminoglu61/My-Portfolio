@@ -2,7 +2,7 @@ import "./styleTitleSect.css";
 
 function TitleSect() {
   return (
-    <div className="backgroundTitle">
+    <div className="backgroundTitle" id="home">
       <div className="titleDiv">
         <div className="textDiv">
           <h2 className="titleBlue">Hi,I'm</h2>

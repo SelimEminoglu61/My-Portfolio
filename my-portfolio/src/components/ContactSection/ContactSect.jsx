@@ -5,7 +5,7 @@ import Form from "../../views/Form/Form";
 function ContactSect() {
   return (
     <div className="container">
-      <div className="contactDiv">
+      <div className="contactDiv" id="contact">
         <div className="midTitleDiv">
           <h3>Contact Me</h3>
         </div>

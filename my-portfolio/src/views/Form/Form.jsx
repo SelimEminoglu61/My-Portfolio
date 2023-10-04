@@ -38,7 +38,6 @@ function Form() {
           id="name"
           className="nameInput"
           type="text"
-          autoFocus
         />
         {isError && <p>{errors.name}</p>}
       </div>
