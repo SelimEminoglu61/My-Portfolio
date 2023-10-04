@@ -1,5 +1,6 @@
 import { useFormik } from "formik";
 import { basicSchema } from "../../schema";
+import { useState } from "react";
 import "./styleForm.css";
 
 const onSubmit = async (values, actions) => {
@@ -13,6 +14,7 @@ const onSubmit = async (values, actions) => {
 };
 
 function Form() {
+  const [isError, setIsError] = useState(false);
   const { values, errors, handleChange, handleSubmit } = useFormik({
     initialValues: {
       name: "",
@@ -38,7 +40,7 @@ function Form() {
           type="text"
           autoFocus
         />
-        {errors.name && <p>{errors.name}</p>}
+        {isError && <p>{errors.name}</p>}
       </div>
       <div>
         <label htmlFor="surname">Your Surname:</label>
@@ -50,7 +52,7 @@ function Form() {
           className="nameInput"
           type="text"
         />
-        {errors.surname && <p>{errors.surname}</p>}
+        {isError && <p>{errors.surname}</p>}
       </div>
       <div>
         <label htmlFor="email">Your Email:</label>
@@ -62,7 +64,7 @@ function Form() {
           className="nameInput"
           type="email"
         />
-        {errors.email && <p>{errors.email}</p>}
+        {isError && <p>{errors.email}</p>}
       </div>
       <div className="messageDiv">
         <label htmlFor="message">Your Message:</label>
@@ -78,9 +80,18 @@ function Form() {
           placeholder="Limit to 500 characters"
           wrap="soft"
         />
-        {errors.message && <p>{errors.message}</p>}
+        {isError && <p>{errors.message}</p>}
       </div>
-      <input className="submitBtn" value="Send Mail" type="submit" />
+      <input
+        className="submitBtn"
+        value="Send Mail"
+        type="submit"
+        onClick={() => {
+          if (errors) {
+            setIsError(true);
+          }
+        }}
+      />
     </form>
   );
 }

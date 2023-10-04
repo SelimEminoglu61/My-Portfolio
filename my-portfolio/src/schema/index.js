@@ -7,8 +7,5 @@ export const basicSchema = yup.object().shape({
     .string()
     .required("Please type your email")
     .email("Please give available email"),
-  message: yup
-    .string()
-    .required("Please type your message")
-    .max("Limit to 500 characters"),
+  message: yup.string().required("Please type your message"),
 });
