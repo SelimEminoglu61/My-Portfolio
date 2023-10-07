@@ -27,12 +27,6 @@ function ContactSect() {
               Selim Eminoğlu
             </a>
           </li>
-          <li>
-            <img src="./src/assets/icons/github.png" alt="icon" />
-            <a href="https://github.com/SelimEminoglu61" target="_blank">
-              SelimEminoglu61
-            </a>
-          </li>
         </ul>
         <Form />
       </div>
