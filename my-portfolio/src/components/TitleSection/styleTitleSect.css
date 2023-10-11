@@ -88,3 +88,24 @@
       invert(0%) opacity(100%) drop-shadow(60px 60px 50px #f22067);
   }
 }
+
+@media (max-width: 1220px) {
+  .titleDiv {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .titleDiv {
+    width: 90%;
+  }
+}
+
+@media (max-width: 870px) {
+  .imgDiv {
+    display: none;
+  }
+  .titleDiv {
+    justify-content: center;
+  }
+}

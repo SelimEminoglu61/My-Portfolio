@@ -57,6 +57,7 @@
   display: flex;
   gap: 2rem;
   list-style: none;
+  height: 38px;
   margin-right: 2rem;
 }
 
@@ -75,4 +76,77 @@
   cursor: pointer;
   background-color: #64ccc5;
   color: #053b50;
+}
+
+.hamMenu {
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-right: 1rem;
+  padding-top: 0.2rem;
+  height: 38px;
+  display: none;
+}
+
+.hamMenu > img {
+  width: 40px;
+  height: 30px;
+}
+
+.burgerList {
+  position: absolute;
+  top: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #053b50;
+  color: #eee;
+  animation-name: backInDown;
+  animation-duration: 1s;
+}
+
+@keyframes backInDown {
+  0% {
+    -webkit-transform: translateY(-1200px) scale(0.7);
+    transform: translateY(-1200px) scale(0.7);
+    opacity: 0.7;
+  }
+
+  80% {
+    -webkit-transform: translateY(0px) scale(0.7);
+    transform: translateY(0px) scale(0.7);
+    opacity: 0.7;
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.burgerList > ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  width: 100%;
+}
+
+.burgerList > ul > a {
+  border-top: 2px solid black;
+  display: flex;
+  justify-content: center;
+}
+
+.burgerList > ul > a > li {
+  margin-top: 0.3rem;
+}
+
+@media (max-width: 768px) {
+  .hamMenu {
+    display: block;
+  }
+  .navbarList {
+    display: none;
+  }
 }
