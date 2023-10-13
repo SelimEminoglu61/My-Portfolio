@@ -12,10 +12,45 @@
   padding-bottom: 2rem;
 }
 
-.expList > li {
+.normalLi {
   display: flex;
   justify-content: center;
   gap: 3rem;
+}
+
+.reverseLi {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+@media (max-width: 1024px) {
+  .reverseLi {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 2rem;
+  }
+  .normalLi {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .listText {
+    width: 100%;
+    padding-left: 10rem;
+  }
+}
+
+@media (max-width: 990px) {
+  .listText {
+    padding-left: 9rem;
+  }
+}
+
+@media (max-width: 895px) {
+  .listText {
+    padding-left: 7rem;
+  }
 }
 
 .listİmg {

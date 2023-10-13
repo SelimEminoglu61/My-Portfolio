@@ -131,3 +131,21 @@
   color: #eee;
   font-size: 15pt;
 }
+
+@media (max-width: 1045px) {
+  .projectDiv > p {
+    margin-top: 1rem;
+  }
+  .aboutDetail {
+    flex-direction: column;
+  }
+  .aboutİmg > img {
+    margin-left: 0rem;
+  }
+  .aboutİmg {
+    height: 185px;
+  }
+  .aboutText > p {
+    margin-left: 1rem;
+  }
+}

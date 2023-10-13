@@ -9,7 +9,7 @@ function ExperienceSect() {
           <h3>Experiences</h3>
         </div>
         <ul className="expList">
-          <li>
+          <li className="normalLi">
             <div className="listİmg">
               <img src="./src/assets/images/turkcell-logo.webp" alt="logo" />
             </div>
@@ -37,7 +37,7 @@ function ExperienceSect() {
               </ul>
             </div>
           </li>
-          <li>
+          <li className="reverseLi">
             <div className="listText">
               <h4>INTERN</h4>
               <h5>Khenda Teknoloji A.Ş. | 03 October 2022 -05 January 2023</h5>
@@ -62,7 +62,7 @@ function ExperienceSect() {
               <img src="./src/assets/images/khenda-logo.jpg" alt="logo" />
             </div>
           </li>
-          <li>
+          <li className="normalLi">
             <div className="listİmg">
               <img src="./src/assets/images/arvis-logo.png" alt="logo" />
             </div>
@@ -84,7 +84,7 @@ function ExperienceSect() {
               </ul>
             </div>
           </li>
-          <li>
+          <li className="reverseLi">
             <div className="listText">
               <h4>R&D INTERN</h4>
               <h5>
