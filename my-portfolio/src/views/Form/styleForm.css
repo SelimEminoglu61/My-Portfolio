@@ -38,3 +38,9 @@ form > div {
   margin-left: auto;
   cursor: pointer;
 }
+
+@media (max-width: 405px) {
+  form {
+    width: 100%;
+  }
+}

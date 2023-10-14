@@ -21,6 +21,12 @@
   margin-left: 2rem;
 }
 
+@media (max-width: 330px) {
+  .textDiv {
+    margin-left: 0rem;
+  }
+}
+
 .titleBlue {
   color: #64ccc5;
   font-size: 40pt;

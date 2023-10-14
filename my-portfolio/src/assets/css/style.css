@@ -19,3 +19,9 @@
   font-size: 32pt;
   color: #eee;
 }
+
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+}

@@ -24,6 +24,19 @@
   gap: 3rem;
 }
 
+.listİmg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.listİmg > img {
+  border: 3px solid #eee;
+  border-radius: 50%;
+  width: 190px;
+  height: 150px;
+}
+
 @media (max-width: 1024px) {
   .reverseLi {
     flex-direction: column-reverse;
@@ -53,15 +66,8 @@
   }
 }
 
-.listİmg {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.listİmg > img {
-  border: 3px solid #eee;
-  border-radius: 50%;
-  width: 190px;
-  height: 150px;
+@media (max-width: 425px) {
+  .listText {
+    padding-left: 2rem;
+  }
 }
