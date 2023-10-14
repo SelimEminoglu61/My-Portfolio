@@ -20,13 +20,28 @@ function Header() {
       </div>
       <div className="navbar">
         <ul className="navbarList">
-          <Link to="home" spy={true} smooth={true} duration={500} offset={-70}>
+          <Link
+            href="#"
+            to="home"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={-70}
+          >
             <li>Home</li>
           </Link>
-          <Link to="about" spy={true} smooth={true} duration={500} offset={-90}>
+          <Link
+            href="#"
+            to="about"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={-90}
+          >
             <li>About</li>
           </Link>
           <Link
+            href="#"
             to="experience"
             spy={true}
             smooth={true}
@@ -36,6 +51,7 @@ function Header() {
             <li>Experience</li>
           </Link>
           <Link
+            href="#"
             to="contact"
             spy={true}
             smooth={true}

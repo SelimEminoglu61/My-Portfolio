@@ -10,7 +10,7 @@ function AboutSect() {
         </div>
         <div className="aboutDetail">
           <div className="aboutİmg">
-            <img src="./src/assets/images/pp-cv.png" alt="image" />
+            <img src="./src/assets/images/pp-cv.webp" alt="image" />
           </div>
           <div className="aboutText">
             <p>
