@@ -39,7 +39,12 @@ function Form() {
           className="nameInput"
           type="text"
         />
-        {isError && <p>{errors.name}</p>}
+        {isError && (
+          <p className="errorText">
+            <img src="./src/assets/icons/warning.png" alt="icon" />
+            {errors.name}
+          </p>
+        )}
       </div>
       <div>
         <label htmlFor="surname">Your Surname:</label>
@@ -51,7 +56,12 @@ function Form() {
           className="nameInput"
           type="text"
         />
-        {isError && <p>{errors.surname}</p>}
+        {isError && (
+          <p className="errorText">
+            <img src="./src/assets/icons/warning.png" alt="icon" />
+            {errors.surname}
+          </p>
+        )}
       </div>
       <div>
         <label htmlFor="email">Your Email:</label>
@@ -63,7 +73,12 @@ function Form() {
           className="nameInput"
           type="email"
         />
-        {isError && <p>{errors.email}</p>}
+        {isError && (
+          <p className="errorText">
+            <img src="./src/assets/icons/warning.png" alt="icon" />
+            {errors.email}
+          </p>
+        )}
       </div>
       <div className="messageDiv">
         <label htmlFor="message">Your Message:</label>
@@ -75,12 +90,17 @@ function Form() {
           rows="10"
           columns="100"
           required
-          maxLength="500"
-          placeholder="Limit to 500 characters"
+          maxLength="1500"
+          placeholder="Limit to 1500 characters"
           wrap="soft"
         />
-        {isError && <p>{errors.message}</p>}
       </div>
+      {isError && (
+        <p className="errorText messageError">
+          <img src="./src/assets/icons/warning.png" alt="icon" />
+          {errors.message}
+        </p>
+      )}
       <input
         className="submitBtn"
         value="Send Mail"

@@ -39,6 +39,19 @@ form > div {
   cursor: pointer;
 }
 
+.errorText {
+  margin-top: 0.3rem;
+  color: red;
+}
+.errorText > img {
+  width: 15px;
+}
+
+.messageError {
+  margin-top: -1rem;
+  margin-left: 4rem;
+}
+
 @media (max-width: 405px) {
   form {
     width: 100%;
