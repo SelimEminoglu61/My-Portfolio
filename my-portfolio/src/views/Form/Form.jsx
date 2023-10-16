@@ -39,7 +39,7 @@ function Form() {
           className="nameInput"
           type="text"
         />
-        {isError && (
+        {isError && errors.name && (
           <p className="errorText">
             <img src="./src/assets/icons/warning.png" alt="icon" />
             {errors.name}
@@ -56,7 +56,7 @@ function Form() {
           className="nameInput"
           type="text"
         />
-        {isError && (
+        {isError && errors.surname && (
           <p className="errorText">
             <img src="./src/assets/icons/warning.png" alt="icon" />
             {errors.surname}
@@ -73,7 +73,7 @@ function Form() {
           className="nameInput"
           type="email"
         />
-        {isError && (
+        {isError && errors.email && (
           <p className="errorText">
             <img src="./src/assets/icons/warning.png" alt="icon" />
             {errors.email}
@@ -95,7 +95,7 @@ function Form() {
           wrap="soft"
         />
       </div>
-      {isError && (
+      {isError && errors.message && (
         <p className="errorText messageError">
           <img src="./src/assets/icons/warning.png" alt="icon" />
           {errors.message}
@@ -106,8 +106,12 @@ function Form() {
         value="Send Mail"
         type="submit"
         onClick={() => {
+          console.log(isError);
+          console.log(errors);
           if (errors) {
             setIsError(true);
+          } else {
+            setIsError(false);
           }
         }}
       />
