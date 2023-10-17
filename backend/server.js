@@ -19,7 +19,7 @@ transporter.verify(function (error, success) {
 });
 
 let bilgiler = {
-  from: "Selim Eminoğlu 1967selim61@gmail.com",
+  from: "1967selim61@gmail.com",
   to: "selim.eminoglu.9257@gmail.com",
   subject: "Portfolyo Mail Service",
   text: "merhaba abi",
