@@ -3,9 +3,33 @@ import { basicSchema } from "../../schema";
 import { useState } from "react";
 import "./styleForm.css";
 
+async function postMailInfo(url, data) {
+  try {
+    let response = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (response.ok) {
+      const jsonData = await response.json();
+      return jsonData;
+    } else {
+      throw new Error("HTTP hata kodu: " + response.status);
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 const onSubmit = async (values, actions) => {
   console.log(values);
-  console.log(actions);
+
+  postMailInfo("http://localhost:3001/veri", values).then((response) => {
+    console.log(response);
+  });
 
   await new Promise((resolve) => {
     setTimeout(resolve, 1000);
