@@ -25,9 +25,7 @@ async function postMailInfo(url, data) {
 }
 
 const onSubmit = async (values, actions) => {
-  console.log(values);
-
-  postMailInfo("http://localhost:3001/veri", values).then((response) => {
+  postMailInfo("http://localhost:3001/", values).then((response) => {
     console.log(response);
   });
 

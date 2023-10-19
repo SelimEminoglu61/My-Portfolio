@@ -2,17 +2,10 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 const port = 3001;
+const nodemailer = require("nodemailer");
 
 app.use(cors());
 app.use(express.json());
-
-app.post("/veri", (req, res) => {
-  const gelenVeri = req.body;
-  console.log(gelenVeri);
-  res.send("geldi" + JSON.stringify(gelenVeri));
-});
-
-const nodemailer = require("nodemailer");
 
 let transporter = nodemailer.createTransport({
   service: "Gmail",
@@ -25,21 +18,34 @@ let transporter = nodemailer.createTransport({
 transporter.verify(function (error, success) {
   if (error) throw error;
 
-  console.log("baglanti saglandi", success);
+  console.log(success);
 });
 
-let bilgiler = {
-  from: "1967selim61@gmail.com",
-  to: "selim.eminoglu.9257@gmail.com",
-  subject: "Portfolyo Mail Service",
-  text: "merhaba abi",
-};
+app.post("/", (req, res) => {
+  const gelenVeri = req.body;
 
-// transporter.sendMail(bilgiler, function (error, info) {
-//   if (error) throw error;
+  let bilgiler = {
+    from: "1967selim61@gmail.com",
+    to: "selim.eminoglu.9257@gmail.com",
+    subject: "Portfolyo Mail Service",
+    text:
+      gelenVeri.name +
+      " " +
+      gelenVeri.surname +
+      "\n" +
+      gelenVeri.email +
+      "\n" +
+      gelenVeri.message,
+  };
 
-//   console.log("başarılı", info.response);
-// });
+  transporter.sendMail(bilgiler, function (error, info) {
+    if (error) throw error;
+
+    console.log("başarılı", info.response);
+  });
+
+  res.send(JSON.stringify(gelenVeri));
+});
 
 app.listen(port, () => {
   console.log(`Sunucu ${port} portunda çalışıyor.`);
