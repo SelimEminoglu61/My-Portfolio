@@ -1,7 +1,45 @@
 import { useFormik } from "formik";
 import { basicSchema } from "../../schema";
 import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./styleForm.css";
+
+function successToast() {
+  toast.success("Başarılı Şekilde Gönderildi", {
+    position: "bottom-right",
+    autoClose: 2000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: false,
+    theme: "light",
+  });
+}
+
+function successInfoToast(name, surname) {
+  toast.success(`Gönderilen kişi:${name} ${surname}`, {
+    position: "bottom-right",
+    autoClose: 2000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: false,
+    theme: "light",
+  });
+}
+
+function errorToast(error) {
+  toast.error(`${error.message}`, {
+    position: "bottom-right",
+    autoClose: 2000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: false,
+    theme: "light",
+  });
+}
 
 async function postMailInfo(url, data) {
   try {
@@ -14,19 +52,20 @@ async function postMailInfo(url, data) {
     });
 
     if (response.ok) {
+      successToast();
       const jsonData = await response.json();
       return jsonData;
     } else {
       throw new Error("HTTP hata kodu: " + response.status);
     }
   } catch (error) {
-    console.log(error);
+    errorToast(error);
   }
 }
 
 const onSubmit = async (values, actions) => {
   postMailInfo("http://localhost:3001/", values).then((response) => {
-    console.log(response);
+    successInfoToast(response.name, response.surname);
   });
 
   await new Promise((resolve) => {
@@ -50,6 +89,7 @@ function Form() {
 
   return (
     <form onSubmit={handleSubmit}>
+      <ToastContainer />
       <h3>Send Mail To Me</h3>
       <div>
         <label htmlFor="name">Your Name:</label>
@@ -128,8 +168,6 @@ function Form() {
         value="Send Mail"
         type="submit"
         onClick={() => {
-          console.log(isError);
-          console.log(errors);
           if (errors) {
             setIsError(true);
           } else {

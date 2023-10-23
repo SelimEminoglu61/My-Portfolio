@@ -17,8 +17,6 @@ let transporter = nodemailer.createTransport({
 
 transporter.verify(function (error, success) {
   if (error) throw error;
-
-  console.log(success);
 });
 
 app.post("/", (req, res) => {
@@ -40,8 +38,7 @@ app.post("/", (req, res) => {
 
   transporter.sendMail(bilgiler, function (error, info) {
     if (error) throw error;
-
-    console.log("başarılı", info.response);
+    console.log(info.response);
   });
 
   res.send(JSON.stringify(gelenVeri));
