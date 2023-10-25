@@ -1,7 +1,33 @@
+import { useEffect } from "react";
 import "./styleExperienceSect.css";
 import "../../assets/css/style.css";
 
 function ExperienceSect() {
+  useEffect(() => {
+    const images = document.querySelectorAll('img[loading="lazy"]');
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src;
+            img.removeAttribute("loading");
+            observer.unobserve(img);
+          }
+        });
+      });
+
+      images.forEach((img) => {
+        observer.observe(img);
+      });
+    } else {
+      images.forEach((img) => {
+        img.src = img.dataset.src;
+        img.removeAttribute("loading");
+      });
+    }
+  }, []);
   return (
     <div className="container">
       <div className="experienceDiv" id="experience">
@@ -11,7 +37,12 @@ function ExperienceSect() {
         <ul className="expList">
           <li className="normalLi">
             <div className="listİmg">
-              <img src="./src/assets/images/turkcell-logo.webp" alt="logo" />
+              <img
+                src="./src/assets/images/turkcell-logo.webp"
+                alt="logo"
+                data-src="./src/assets/images/turkcell-logo.webp"
+                loading="lazy"
+              />
             </div>
             <div className="listText">
               <h4>FRONT END DEVELOPER/BOOTCAMP</h4>
@@ -59,12 +90,22 @@ function ExperienceSect() {
               </ul>
             </div>
             <div className="listİmg">
-              <img src="./src/assets/images/khenda-logo.jpg" alt="logo" />
+              <img
+                src="./src/assets/images/khenda-logo.jpg"
+                alt="logo"
+                data-src="./src/assets/images/khenda-logo.jpg"
+                loading="lazy"
+              />
             </div>
           </li>
           <li className="normalLi">
             <div className="listİmg">
-              <img src="./src/assets/images/arvis-logo.png" alt="logo" />
+              <img
+                src="./src/assets/images/arvis-logo.png"
+                alt="logo"
+                data-src="./src/assets/images/arvis-logo.png"
+                loading="lazy"
+              />
             </div>
             <div className="listText">
               <h4>ARTIFICIAL INTELLIGENCE R&D INTERN</h4>
@@ -105,7 +146,12 @@ function ExperienceSect() {
               </ul>
             </div>
             <div className="listİmg">
-              <img src="./src/assets/images/eteration-logo.jpg" alt="logo" />
+              <img
+                src="./src/assets/images/eteration-logo.jpg"
+                alt="logo"
+                data-src="./src/assets/images/eteration-logo.jpg"
+                loading="lazy"
+              />
             </div>
           </li>
         </ul>

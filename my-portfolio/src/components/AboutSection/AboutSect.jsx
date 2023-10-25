@@ -1,7 +1,33 @@
+import { useEffect } from "react";
 import "./styleAboutSect.css";
 import "../../assets/css/style.css";
 
 function AboutSect() {
+  useEffect(() => {
+    const images = document.querySelectorAll('img[loading="lazy"]');
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src;
+            img.removeAttribute("loading");
+            observer.unobserve(img);
+          }
+        });
+      });
+
+      images.forEach((img) => {
+        observer.observe(img);
+      });
+    } else {
+      images.forEach((img) => {
+        img.src = img.dataset.src;
+        img.removeAttribute("loading");
+      });
+    }
+  }, []);
   return (
     <div className="container">
       <div className="aboutDiv" id="about">
@@ -10,7 +36,12 @@ function AboutSect() {
         </div>
         <div className="aboutDetail">
           <div className="aboutİmg">
-            <img src="./src/assets/images/pp-cv.webp" alt="image" />
+            <img
+              src="./src/assets/images/pp-cv.webp"
+              alt="image"
+              data-src="./src/assets/images/pp-cv.webp"
+              loading="lazy"
+            />
           </div>
           <div className="aboutText">
             <p>
@@ -34,9 +65,19 @@ function AboutSect() {
             will be added on this page.{" "}
           </p>
           <a href="https://github.com/SelimEminoglu61" target="_blank">
-            <img src="./src/assets/icons/github.png" alt="icon" />
+            <img
+              src="./src/assets/icons/github.png"
+              alt="icon"
+              data-src="./src/assets/icons/github.png"
+              loading="lazy"
+            />
             Go To My Github Account
-            <img src="./src/assets/icons/right-arrow.png" alt="icon" />
+            <img
+              src="./src/assets/icons/right-arrow.png"
+              alt="icon"
+              data-src="./src/assets/icons/right-arrow.png"
+              loading="lazy"
+            />
           </a>
         </div>
         <div className="skillTitle">
@@ -44,35 +85,75 @@ function AboutSect() {
         </div>
         <ul className="skillList">
           <li>
-            <img src="./src/assets/icons/html-5.png" alt="icon" />
+            <img
+              src="./src/assets/icons/html-5.png"
+              alt="icon"
+              data-src="./src/assets/icons/html-5.png"
+              loading="lazy"
+            />
             <h4>HTML</h4>
           </li>
           <li>
-            <img src="./src/assets/icons/css-3.png" alt="icon" />
+            <img
+              src="./src/assets/icons/css-3.png"
+              alt="icon"
+              data-src="./src/assets/icons/css-3.png"
+              loading="lazy"
+            />
             <h4>CSS</h4>
           </li>
           <li>
-            <img src="./src/assets/icons/js.png" alt="icon" />
+            <img
+              src="./src/assets/icons/js.png"
+              alt="icon"
+              data-src="./src/assets/icons/js.png"
+              loading="lazy"
+            />
             <h4>Javascript</h4>
           </li>
           <li>
-            <img src="./src/assets/icons/physics.png" alt="icon" />
+            <img
+              src="./src/assets/icons/physics.png"
+              alt="icon"
+              data-src="./src/assets/icons/physics.png"
+              loading="lazy"
+            />
             <h4>React</h4>
           </li>
           <li>
-            <img src="./src/assets/icons/python.png" alt="icon" />
+            <img
+              src="./src/assets/icons/python.png"
+              alt="icon"
+              data-src="./src/assets/icons/python.png"
+              loading="lazy"
+            />
             <h4>Python</h4>
           </li>
           <li>
-            <img src="./src/assets/icons/sass.png" alt="icon" />
+            <img
+              src="./src/assets/icons/sass.png"
+              alt="icon"
+              data-src="./src/assets/icons/sass.png"
+              loading="lazy"
+            />
             <h4>SASS</h4>
           </li>
           <li>
-            <img src="./src/assets/icons/bootstrap.png" alt="icon" />
+            <img
+              src="./src/assets/icons/bootstrap.png"
+              alt="icon"
+              data-src="./src/assets/icons/bootstrap.png"
+              loading="lazy"
+            />
             <h4>Bootstrap</h4>
           </li>
           <li>
-            <img src="./src/assets/icons/structure.png" alt="icon" />
+            <img
+              src="./src/assets/icons/structure.png"
+              alt="icon"
+              data-src="./src/assets/icons/structure.png"
+              loading="lazy"
+            />
             <h4>React Native</h4>
           </li>
         </ul>
