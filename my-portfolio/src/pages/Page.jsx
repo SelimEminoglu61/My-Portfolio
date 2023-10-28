@@ -4,7 +4,7 @@ import ContactSect from "../components/ContactSection/ContactSect";
 import ExperienceSect from "../components/ExperienceSection/ExperienceSect";
 import Header from "../components/Header/Header";
 import TitleSect from "../components/TitleSection/TitleSect";
-import "./stylePage.css";
+import "../assets/css/style.css";
 function Page() {
   return (
     <div className="background">

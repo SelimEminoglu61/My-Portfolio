@@ -1,7 +1,27 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
+import { defineConfig } from "vite";
+import { minifyHtml } from "vite-plugin-html";
+import { terser } from "rollup-plugin-terser";
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-})
+  build: {
+    rollupOptions: {
+      plugins: [terser()],
+      output: {
+        manualChunks: undefined,
+      },
+    },
+
+    terserOptions: {
+      compress: {
+        drop_console: true,
+      },
+    },
+  },
+  css: {
+    postcss: {
+      config: require("./src/postcss.config"),
+    },
+  },
+
+  plugins: [minifyHtml()],
+});

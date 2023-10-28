@@ -56,7 +56,7 @@ async function postMailInfo(url, data) {
       const jsonData = await response.json();
       return jsonData;
     } else {
-      throw new Error("HTTP hata kodu: " + response.status);
+      throw new Error(response.status);
     }
   } catch (error) {
     errorToast(error);
