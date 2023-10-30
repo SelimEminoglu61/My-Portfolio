@@ -9,6 +9,12 @@ const nodemailer = require("nodemailer");
 app.use(cors());
 app.use(express.json());
 
+app.use(express.static(path.join(__dirname, "../my-portfolio/dist")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../my-portfolio/dist/index.html"));
+});
+
 let transporter = nodemailer.createTransport({
   service: "Gmail",
   auth: {
@@ -44,12 +50,6 @@ app.post("/", (req, res) => {
   });
 
   res.send(JSON.stringify(gelenVeri));
-});
-
-app.use(express.static(path.join(__dirname, "../my-portfolio/dist")));
-
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../my-portfolio/dist/index.html"));
 });
 
 const port = process.env.PORT || 3000;
