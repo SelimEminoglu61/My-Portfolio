@@ -46,10 +46,10 @@ app.post("/", (req, res) => {
   res.send(JSON.stringify(gelenVeri));
 });
 
-app.use(express.static(path.join(__dirname, "../my-portfolio/dist")));
+app.use(express.static(path.join(__dirname, "./my-portfolio/dist")));
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../my-portfolio/dist/index.html"));
+  res.sendFile(path.join(__dirname, "./my-portfolio/dist/index.html"));
 });
 
 const port = process.env.PORT || 3001;
