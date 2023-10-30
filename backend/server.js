@@ -52,7 +52,7 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "../my-portfolio/dist/index.html"));
 });
 
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Sunucu ${port} portunda çalışıyor.`);
 });

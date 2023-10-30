@@ -64,7 +64,7 @@ async function postMailInfo(url, data) {
 }
 
 const onSubmit = async (values, actions) => {
-  postMailInfo("http://localhost:3001/", values).then((response) => {
+  postMailInfo("http://localhost:3000/", values).then((response) => {
     successInfoToast(response.name, response.surname);
   });
 
