@@ -1,7 +1,9 @@
+require("dotenv").config();
+const path = require("path");
 const express = require("express");
 const cors = require("cors");
 const app = express();
-const port = 3001;
+
 const nodemailer = require("nodemailer");
 
 app.use(cors());
@@ -44,6 +46,13 @@ app.post("/", (req, res) => {
   res.send(JSON.stringify(gelenVeri));
 });
 
+app.use(express.static(path.join(__dirname, "./my-portfolio/dist")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "./my-portfolio/dist/index.html"));
+});
+
+const port = process.env.PORT || 3001;
 app.listen(port, () => {
   console.log(`Sunucu ${port} portunda çalışıyor.`);
 });

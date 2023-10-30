@@ -1,5 +1,5 @@
 import { defineConfig } from "vite";
-import { minifyHtml } from "vite-plugin-html";
+import { createHtmlPlugin } from "vite-plugin-html";
 import { terser } from "rollup-plugin-terser";
 
 export default defineConfig({
@@ -19,9 +19,9 @@ export default defineConfig({
   },
   css: {
     postcss: {
-      config: require("./src/postcss.config"),
+      config: require("./src/postcss.config.cjs"),
     },
   },
 
-  plugins: [minifyHtml()],
+  plugins: [createHtmlPlugin()],
 });
