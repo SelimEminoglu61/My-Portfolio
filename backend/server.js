@@ -32,7 +32,7 @@ transporter.verify(function (error, success) {
   if (error) throw error;
 });
 
-app.post("/api", (req, res) => {
+app.post("/", (req, res) => {
   const gelenVeri = req.body;
 
   let bilgiler = {
