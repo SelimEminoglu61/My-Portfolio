@@ -1,5 +1,5 @@
 import { defineConfig } from "vite";
-import { createHtmlPlugin } from "vite-plugin-html";
+import react from "@vitejs/plugin-react-swc";
 import { terser } from "rollup-plugin-terser";
 
 export default defineConfig({
@@ -23,5 +23,5 @@ export default defineConfig({
     },
   },
 
-  plugins: [createHtmlPlugin()],
+  plugins: [react()],
 });
