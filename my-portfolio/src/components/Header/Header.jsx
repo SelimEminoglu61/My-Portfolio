@@ -63,7 +63,7 @@ function Header() {
         </ul>
       </div>
       <div className="hamMenu" onClick={() => isOpenHamMenu()}>
-        <img src="./src/assets/icons/menu.png" alt="icon" />
+        <img src="/icons/menu.png" alt="icon" />
       </div>
       {isOpenMenu && (
         <div className="burgerList">
