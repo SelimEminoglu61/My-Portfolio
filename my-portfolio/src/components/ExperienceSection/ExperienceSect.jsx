@@ -38,9 +38,9 @@ function ExperienceSect() {
           <li className="normalLi">
             <div className="listİmg">
               <img
-                src="./src/assets/images/turkcell-logo.webp"
+                src="/images/turkcell-logo.webp"
                 alt="logo"
-                data-src="./src/assets/images/turkcell-logo.webp"
+                data-src="/images/turkcell-logo.webp"
                 loading="lazy"
               />
             </div>
@@ -91,9 +91,9 @@ function ExperienceSect() {
             </div>
             <div className="listİmg">
               <img
-                src="./src/assets/images/khenda-logo.jpg"
+                src="/images/khenda-logo.jpg"
                 alt="logo"
-                data-src="./src/assets/images/khenda-logo.jpg"
+                data-src="/images/khenda-logo.jpg"
                 loading="lazy"
               />
             </div>
@@ -101,9 +101,9 @@ function ExperienceSect() {
           <li className="normalLi">
             <div className="listİmg">
               <img
-                src="./src/assets/images/arvis-logo.png"
+                src="/images/arvis-logo.png"
                 alt="logo"
-                data-src="./src/assets/images/arvis-logo.png"
+                data-src="/images/arvis-logo.png"
                 loading="lazy"
               />
             </div>
@@ -147,9 +147,9 @@ function ExperienceSect() {
             </div>
             <div className="listİmg">
               <img
-                src="./src/assets/images/eteration-logo.jpg"
+                src="/images/eteration-logo.jpg"
                 alt="logo"
-                data-src="./src/assets/images/eteration-logo.jpg"
+                data-src="/images/eteration-logo.jpg"
                 loading="lazy"
               />
             </div>

@@ -38,27 +38,27 @@ function ContactSect() {
         <ul className="infoList">
           <li>
             <img
-              src="./src/assets/icons/whatsapp.png"
+              src="/icons/whatsapp.png"
               alt="icon"
-              data-src="./src/assets/icons/whatsapp.png"
+              data-src="/icons/whatsapp.png"
               loading="lazy"
             />
             <p>+90545 532 81 11</p>
           </li>
           <li>
             <img
-              src="./src/assets/icons/gmail.png"
+              src="/icons/gmail.png"
               alt="icon"
-              data-src="./src/assets/icons/gmail.png"
+              data-src="/icons/gmail.png"
               loading="lazy"
             />
             <p>selim.eminoglu.9257@gmail.com</p>
           </li>
           <li>
             <img
-              src="./src/assets/icons/linkedin.png"
+              src="/icons/linkedin.png"
               alt="icon"
-              data-src="./src/assets/icons/linkedin.png"
+              data-src="/icons/linkedin.png"
               loading="lazy"
             />
             <a
