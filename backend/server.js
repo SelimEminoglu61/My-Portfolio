@@ -9,11 +9,6 @@ const nodemailer = require("nodemailer");
 app.use(cors());
 app.use(express.json());
 
-const port = process.env.PORT || 3000;
-app.listen(port, () => {
-  console.log(`Sunucu ${port} portunda çalışıyor.`);
-});
-
 app.use(express.static(path.join(__dirname, "../my-portfolio/dist")));
 
 app.get("*", (req, res) => {
@@ -32,7 +27,7 @@ transporter.verify(function (error, success) {
   if (error) throw error;
 });
 
-app.post("/", (req, res) => {
+app.post("/api", (req, res) => {
   const gelenVeri = req.body;
 
   let bilgiler = {
@@ -55,4 +50,9 @@ app.post("/", (req, res) => {
   });
 
   res.send(JSON.stringify(gelenVeri));
+});
+
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`Sunucu ${port} portunda çalışıyor.`);
 });
