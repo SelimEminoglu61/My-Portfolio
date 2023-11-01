@@ -1,7 +1,7 @@
 .backgroundTitle {
   background-size: cover;
   background-image: url("../../assets/images/foto-3.webp");
-  min-height: 600px;
+  min-height: 590px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,7 +9,7 @@
 
 .titleDiv {
   display: flex;
-  height: 600px;
+  height: 590px;
   width: 70%;
 }
 
