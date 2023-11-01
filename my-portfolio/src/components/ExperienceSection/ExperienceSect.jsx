@@ -38,9 +38,9 @@ function ExperienceSect() {
           <li className="normalLi">
             <div className="listİmg">
               <img
-                src="/turkcell-logo.webp"
+                src="./src/assets/images/turkcell-logo.webp"
                 alt="logo"
-                data-src="/turkcell-logo.webp"
+                data-src="./src/assets/images/turkcell-logo.webp"
                 loading="lazy"
               />
             </div>
