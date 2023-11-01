@@ -64,11 +64,9 @@ async function postMailInfo(url, data) {
 }
 
 const onSubmit = async (values, actions) => {
-  postMailInfo("https://selimeminoglu-portfolio.cyclic.app:3000/", values).then(
-    (response) => {
-      successInfoToast(response.name, response.surname);
-    }
-  );
+  postMailInfo("https://localhost:3000/", values).then((response) => {
+    successInfoToast(response.name, response.surname);
+  });
 
   await new Promise((resolve) => {
     setTimeout(resolve, 1000);
