@@ -9,6 +9,8 @@ const nodemailer = require("nodemailer");
 app.use(cors());
 app.use(express.json());
 
+app.use(morgan("combined"));
+
 app.use(express.static(path.join(__dirname, "../my-portfolio/dist")));
 
 app.get("*", (req, res) => {
