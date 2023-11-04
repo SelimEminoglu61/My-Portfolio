@@ -52,7 +52,7 @@ app.post("/", (req, res) => {
   res.send(JSON.stringify(gelenVeri));
 });
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 80;
 app.listen(port, () => {
   console.log(`Sunucu ${port} portunda çalışıyor.`);
 });
