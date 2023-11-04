@@ -9,6 +9,12 @@ const nodemailer = require("nodemailer");
 app.use(cors());
 app.use(express.json());
 
+app.use(
+  cors({
+    origin: "https://selim-eminoglu-portfolio.vercel.app",
+  })
+);
+
 let transporter = nodemailer.createTransport({
   service: "Gmail",
   auth: {
