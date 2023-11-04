@@ -64,9 +64,11 @@ async function postMailInfo(url, data) {
 }
 
 const onSubmit = async (values, actions) => {
-  postMailInfo("http://localhost:3000/", values).then((response) => {
-    successInfoToast(response.name, response.surname);
-  });
+  postMailInfo("https://my-portfolio-backend-three.vercel.app", values).then(
+    (response) => {
+      successInfoToast(response.name, response.surname);
+    }
+  );
 
   await new Promise((resolve) => {
     setTimeout(resolve, 1000);
