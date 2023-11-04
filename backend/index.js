@@ -3,19 +3,11 @@ const path = require("path");
 const express = require("express");
 const cors = require("cors");
 const app = express();
-const morgan = require("morgan");
 
 const nodemailer = require("nodemailer");
 
-const port = process.env.PORT || 3000;
-app.listen(port, () => {
-  console.log(`Sunucu ${port} portunda çalışıyor.`);
-});
-
 app.use(cors());
 app.use(express.json());
-
-app.use(morgan("combined"));
 
 app.use(express.static(path.join(__dirname, "../my-portfolio/dist")));
 
@@ -58,4 +50,9 @@ app.post("/", (req, res) => {
   });
 
   res.send(JSON.stringify(gelenVeri));
+});
+
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`Sunucu ${port} portunda çalışıyor.`);
 });
