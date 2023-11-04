@@ -45,6 +45,7 @@ async function postMailInfo(url, data) {
   try {
     let response = await fetch(url, {
       method: "POST",
+      mode: "no-cors",
       headers: {
         "Content-Type": "application/json",
       },
@@ -105,7 +106,7 @@ function Form() {
         />
         {isError && errors.name && (
           <p className="errorText">
-            <img src="./src/assets/icons/warning.png" alt="icon" />
+            <img src="/icons/warning.png" alt="icon" />
             {errors.name}
           </p>
         )}
@@ -122,7 +123,7 @@ function Form() {
         />
         {isError && errors.surname && (
           <p className="errorText">
-            <img src="./src/assets/icons/warning.png" alt="icon" />
+            <img src="/icons/warning.png" alt="icon" />
             {errors.surname}
           </p>
         )}
@@ -139,7 +140,7 @@ function Form() {
         />
         {isError && errors.email && (
           <p className="errorText">
-            <img src="./src/assets/icons/warning.png" alt="icon" />
+            <img src="/icons/warning.png" alt="icon" />
             {errors.email}
           </p>
         )}
@@ -161,7 +162,7 @@ function Form() {
       </div>
       {isError && errors.message && (
         <p className="errorText messageError">
-          <img src="./src/assets/icons/warning.png" alt="icon" />
+          <img src="/icons/warning.png" alt="icon" />
           {errors.message}
         </p>
       )}
