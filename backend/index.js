@@ -29,33 +29,38 @@ transporter.verify(function (error, success) {
 });
 
 app.post("/", (req, res) => {
-  const gelenVeri = req.body;
+  if (req.method === "OPTIONS") {
+    res.header(
+      "Access-Control-Allow-Origin",
+      "https://selim-eminoglu-portfolio.vercel.app"
+    );
+    res.header("Access-Control-Allow-Methods", "POST");
+    res.header("Access-Control-Allow-Headers", "Content-Type");
+    res.status(200).send();
+  } else {
+    const gelenVeri = req.body;
 
-  res.header(
-    "Access-Control-Allow-Origin",
-    "https://selim-eminoglu-portfolio.vercel.app"
-  );
+    let bilgiler = {
+      from: "1967selim61@gmail.com",
+      to: "selim.eminoglu.9257@gmail.com",
+      subject: "Portfolyo Mail Service",
+      text:
+        gelenVeri.name +
+        " " +
+        gelenVeri.surname +
+        "\n" +
+        gelenVeri.email +
+        "\n" +
+        gelenVeri.message,
+    };
 
-  let bilgiler = {
-    from: "1967selim61@gmail.com",
-    to: "selim.eminoglu.9257@gmail.com",
-    subject: "Portfolyo Mail Service",
-    text:
-      gelenVeri.name +
-      " " +
-      gelenVeri.surname +
-      "\n" +
-      gelenVeri.email +
-      "\n" +
-      gelenVeri.message,
-  };
+    transporter.sendMail(bilgiler, function (error, info) {
+      if (error) throw error;
+      console.log(info.response);
+    });
 
-  transporter.sendMail(bilgiler, function (error, info) {
-    if (error) throw error;
-    console.log(info.response);
-  });
-
-  res.send(JSON.stringify(gelenVeri));
+    res.send(JSON.stringify(gelenVeri));
+  }
 });
 
 const port = process.env.PORT || 3000;
