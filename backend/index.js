@@ -1,18 +1,29 @@
 require("dotenv").config();
-const path = require("path");
 const express = require("express");
-const cors = require("cors");
 const app = express();
-
 const nodemailer = require("nodemailer");
 
 app.use(express.json());
-app.use(
-  cors({
-    origin: "https://selim-eminoglu-portfolio.vercel.app",
-    methods: "POST",
-  })
-);
+
+const allowCors = (fn) => async (req, res) => {
+  res.setHeader("Access-Control-Allow-Credentials", true);
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader(
+    "Access-Control-Allow-Methods",
+    "GET,OPTIONS,PATCH,DELETE,POST,PUT"
+  );
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
+  );
+  if (req.method === "OPTIONS") {
+    res.status(200).end();
+    return;
+  }
+  return await fn(req, res);
+};
+
+app.use(allowCors);
 
 let transporter = nodemailer.createTransport({
   service: "Gmail",
