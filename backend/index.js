@@ -12,6 +12,7 @@ app.use(express.json());
 app.use(
   cors({
     origin: "https://selim-eminoglu-portfolio.vercel.app",
+    methods: "POST",
   })
 );
 
