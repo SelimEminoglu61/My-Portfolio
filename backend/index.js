@@ -31,6 +31,11 @@ transporter.verify(function (error, success) {
 app.post("/", (req, res) => {
   const gelenVeri = req.body;
 
+  res.header(
+    "Access-Control-Allow-Origin",
+    "https://selim-eminoglu-portfolio.vercel.app"
+  );
+
   let bilgiler = {
     from: "1967selim61@gmail.com",
     to: "selim.eminoglu.9257@gmail.com",
@@ -49,11 +54,6 @@ app.post("/", (req, res) => {
     if (error) throw error;
     console.log(info.response);
   });
-
-  res.header(
-    "Access-Control-Allow-Origin",
-    "https://selim-eminoglu-portfolio.vercel.app"
-  );
 
   res.send(JSON.stringify(gelenVeri));
 });
