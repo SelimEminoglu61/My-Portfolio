@@ -50,6 +50,11 @@ app.post("/", (req, res) => {
     console.log(info.response);
   });
 
+  res.header(
+    "Access-Control-Allow-Origin",
+    "https://selim-eminoglu-portfolio.vercel.app"
+  );
+
   res.send(JSON.stringify(gelenVeri));
 });
 
