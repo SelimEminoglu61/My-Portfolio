@@ -6,9 +6,7 @@ const app = express();
 
 const nodemailer = require("nodemailer");
 
-app.use(cors());
 app.use(express.json());
-
 app.use(
   cors({
     origin: "https://selim-eminoglu-portfolio.vercel.app",
@@ -29,45 +27,28 @@ transporter.verify(function (error, success) {
 });
 
 app.post("/", (req, res) => {
-  if (req.method === "OPTIONS") {
-    res.setHeader("Access-Control-Allow-Credentials", true);
-    res.setHeader(
-      "Access-Control-Allow-Origin",
-      "https://selim-eminoglu-portfolio.vercel.app"
-    );
-    res.setHeader(
-      "Access-Control-Allow-Methods",
-      "GET,OPTIONS,PATCH,DELETE,POST,PUT"
-    );
-    res.setHeader(
-      "Access-Control-Allow-Headers",
-      "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
-    );
-    res.status(200).send();
-  } else {
-    const gelenVeri = req.body;
+  const gelenVeri = req.body;
 
-    let bilgiler = {
-      from: "1967selim61@gmail.com",
-      to: "selim.eminoglu.9257@gmail.com",
-      subject: "Portfolyo Mail Service",
-      text:
-        gelenVeri.name +
-        " " +
-        gelenVeri.surname +
-        "\n" +
-        gelenVeri.email +
-        "\n" +
-        gelenVeri.message,
-    };
+  let bilgiler = {
+    from: "1967selim61@gmail.com",
+    to: "selim.eminoglu.9257@gmail.com",
+    subject: "Portfolyo Mail Service",
+    text:
+      gelenVeri.name +
+      " " +
+      gelenVeri.surname +
+      "\n" +
+      gelenVeri.email +
+      "\n" +
+      gelenVeri.message,
+  };
 
-    transporter.sendMail(bilgiler, function (error, info) {
-      if (error) throw error;
-      console.log(info.response);
-    });
+  transporter.sendMail(bilgiler, function (error, info) {
+    if (error) throw error;
+    console.log(info.response);
+  });
 
-    res.send(JSON.stringify(gelenVeri));
-  }
+  res.send(JSON.stringify(gelenVeri));
 });
 
 const port = process.env.PORT || 3000;
