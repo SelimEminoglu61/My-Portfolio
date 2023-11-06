@@ -30,12 +30,19 @@ transporter.verify(function (error, success) {
 
 app.post("/", (req, res) => {
   if (req.method === "OPTIONS") {
-    res.header(
+    res.setHeader("Access-Control-Allow-Credentials", true);
+    res.setHeader(
       "Access-Control-Allow-Origin",
       "https://selim-eminoglu-portfolio.vercel.app"
     );
-    res.header("Access-Control-Allow-Methods", "POST");
-    res.header("Access-Control-Allow-Headers", "Content-Type");
+    res.setHeader(
+      "Access-Control-Allow-Methods",
+      "GET,OPTIONS,PATCH,DELETE,POST,PUT"
+    );
+    res.setHeader(
+      "Access-Control-Allow-Headers",
+      "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
+    );
     res.status(200).send();
   } else {
     const gelenVeri = req.body;
