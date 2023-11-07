@@ -45,7 +45,7 @@ async function postMailInfo(url, data) {
   try {
     let response = await fetch(url, {
       method: "POST",
-      mode: "no-cors",
+      mode: "same-origin",
       headers: {
         "Content-Type": "application/json",
       },
