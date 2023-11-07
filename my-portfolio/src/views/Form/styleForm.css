@@ -49,3 +49,9 @@ form > div {
     width: 100%;
   }
 }
+
+@media (max-width: 274px) {
+  form > div {
+    margin-left: 2rem;
+  }
+}

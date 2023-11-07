@@ -149,3 +149,8 @@
     margin-left: 1rem;
   }
 }
+@media (max-width: 274px) {
+  .projectDiv > a > img {
+    display: none;
+  }
+}

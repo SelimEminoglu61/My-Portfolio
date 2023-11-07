@@ -54,3 +54,10 @@
     font-size: 15pt;
   }
 }
+
+@media (max-width: 274px) {
+  .infoList > li > p {
+    width: 150px;
+    overflow-wrap: break-word;
+  }
+}

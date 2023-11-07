@@ -21,12 +21,6 @@
   margin-left: 2rem;
 }
 
-@media (max-width: 330px) {
-  .textDiv {
-    margin-left: 0rem;
-  }
-}
-
 .titleBlue {
   color: #64ccc5;
   font-size: 40pt;
@@ -113,5 +107,29 @@
   }
   .titleDiv {
     justify-content: center;
+  }
+}
+
+@media (max-width: 330px) {
+  .textDiv {
+    margin-left: 0rem;
+  }
+}
+
+@media (max-width: 307px) {
+  .textDiv {
+    margin-left: -2rem;
+  }
+}
+
+@media (max-width: 284px) {
+  .textDiv {
+    margin-left: -4rem;
+  }
+}
+
+@media (max-width: 262px) {
+  .textDiv {
+    margin-left: -6rem;
   }
 }
