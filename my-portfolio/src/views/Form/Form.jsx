@@ -47,8 +47,6 @@ async function postMailInfo(url, data) {
       method: "POST",
       mode: "cors",
       headers: {
-        "Access-Control-Request-Method": "POST",
-        "Access-Control-Request-Headers": "Content-Type, Authorization",
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
