@@ -19,12 +19,17 @@ const allowCors = (fn) => async (req, res) => {
     "Access-Control-Allow-Headers",
     "X-CSRF-Token,Authorization, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
   );
-  if (req.method === "OPTIONS") {
-    res.status(200).end();
-    return;
-  }
   return await fn(req, res);
 };
+
+app.options("/", (req, res) => {
+  res.header(
+    "Access-Control-Allow-Origin",
+    "https://selim-eminoglu-portfolio.vercel.app"
+  );
+  res.header("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE");
+  res.status(200).end();
+});
 
 app.use(allowCors);
 
