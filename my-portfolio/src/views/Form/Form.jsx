@@ -68,7 +68,7 @@ async function postMailInfo(url, data) {
 
 const onSubmit = async (values, actions) => {
   postMailInfo(
-    "https://my-portfolio-backend-jgk2ypbai-selim-eminoglus-projects.vercel.app/",
+    "https://vercel.com/selim-eminoglus-projects/my-portfolio-backend/8W3PMaQ3FZZ9drzSYLX52GdyuZ9f/",
     values
   ).then((response) => {
     successInfoToast(response.name, response.surname);
