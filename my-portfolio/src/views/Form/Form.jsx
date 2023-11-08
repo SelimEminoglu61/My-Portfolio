@@ -60,7 +60,6 @@ async function postMailInfo(url, data) {
       throw new Error(response.status);
     }
   } catch (error) {
-    console.log(error);
     errorToast(error);
   }
 }
