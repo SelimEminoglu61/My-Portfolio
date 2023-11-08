@@ -1,4 +1,4 @@
-{   "name":"my-portfolio-backend",
+{   "name":"portfolio-backend",
     "version": 2,
     "builds": [
       { "src": "*.js", "use": "@vercel/node" }
