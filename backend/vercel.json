@@ -13,8 +13,8 @@
         }
       }
     ],
-    "buildCommand":"npm run build",
-    "devCommand":"npm run dev",
+    "buildCommand":"npm run vercel-build",
+    "devCommand":null,
     "framework":null,
     "installCommand":"npm install",
     "outputDirectory":"backend",
