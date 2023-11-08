@@ -17,6 +17,6 @@
     "devCommand":"npm run dev",
     "framework":null,
     "installCommand":"npm install",
-    "outputDirectory":".",
+    "outputDirectory":"./index.js",
     "public":true
   }
