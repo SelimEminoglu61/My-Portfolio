@@ -1,19 +1,24 @@
-{
+{   "name":"my-portfolio-backend",
     "version": 2,
     "builds": [
-      {
-        "src": "./backend/index.js",
-        "use": "@vercel/node"
-      }
+      { "src": "*.js", "use": "@vercel/node" }
     ],
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "./backend/index.js",
+        "dest": "./index.js",
         "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
         "headers": {
           "Access-Control-Allow-Origin": "https://selim-eminoglu-portfolio.vercel.app"
         }
       }
-    ]
+    ],
+    "buildCommand":"npm run build",
+    "cleanUrls":true,
+    "devCommand":"npm run dev",
+    "framework":null,
+    "installCommand":"npm install",
+    "outputDirectory":".",
+    "public":true,
+    "trailingSlash":true
   }
