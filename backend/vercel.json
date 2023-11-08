@@ -14,11 +14,9 @@
       }
     ],
     "buildCommand":"npm run build",
-    "cleanUrls":true,
     "devCommand":"npm run dev",
     "framework":null,
     "installCommand":"npm install",
     "outputDirectory":".",
-    "public":true,
-    "trailingSlash":true
+    "public":true
   }
