@@ -33,6 +33,8 @@ transporter.verify(function (error, success) {
 app.post("/", (req, res) => {
   const gelenVeri = req.body;
 
+  console.log(gelenVeri);
+
   let bilgiler = {
     from: "1967selim61@gmail.com",
     to: "selim.eminoglu.9257@gmail.com",
