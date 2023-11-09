@@ -7,7 +7,7 @@ const cors = require("cors");
 app.use(express.json());
 app.use(
   cors({
-    origin: ["http://selim-eminoglu-portfolio.vercel.app"],
+    origin: ["https://selim-eminoglu-portfolio.vercel.app"],
     methods: ["GET,POST,PUT,DELETE,PATCH,OPTIONS"],
     allowedHeaders: ["Content-Type,Authorization"],
     credentials: true,
