@@ -15,7 +15,7 @@ app.use(
   })
 );
 
-app.use(express.static(path.join(__dirname, "../my-portfolio/dist")));
+app.use(express.static(path.join(__dirname, "../my-portfolio/dist/assets")));
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "../my-portfolio/dist/index.html"));
 });
