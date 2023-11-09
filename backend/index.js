@@ -33,8 +33,6 @@ transporter.verify(function (error, success) {
 app.post("/", (req, res) => {
   const gelenVeri = req.body;
 
-  console.log(gelenVeri);
-
   let bilgiler = {
     from: "1967selim61@gmail.com",
     to: "selim.eminoglu.9257@gmail.com",
@@ -48,6 +46,8 @@ app.post("/", (req, res) => {
       "\n" +
       gelenVeri.message,
   };
+
+  console.log(transporter);
 
   transporter.sendMail(bilgiler, function (error, info) {
     if (error) throw error;
