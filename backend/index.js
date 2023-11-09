@@ -3,6 +3,7 @@ const express = require("express");
 const app = express();
 const nodemailer = require("nodemailer");
 const cors = require("cors");
+const path = require("path");
 
 app.use(express.json());
 app.use(
@@ -13,6 +14,11 @@ app.use(
     credentials: true,
   })
 );
+
+app.use(express.static(path.join(__dirname, "../my-portfolio/dist")));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../my-portfolio/dist/index.html"));
+});
 
 let transporter = nodemailer.createTransport({
   service: "Gmail",
