@@ -57,7 +57,7 @@ app.post("/", (req, res) => {
   res.send(JSON.stringify(gelenVeri));
 });
 
-if (bilgiler.text != "") {
+if (bilgiler.text == "") {
   transporter.sendMail(bilgiler, function (error, info) {
     if (error) {
       console.log("E-posta gönderme hatası:", error);
