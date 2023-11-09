@@ -18,6 +18,13 @@ app.get("/", (req, res) => {
   res.json("Hello");
 });
 
+let bilgiler = {
+  from: "1967selim61@gmail.com",
+  to: "selim.eminoglu.9257@gmail.com",
+  subject: "Portfolyo Mail Service",
+  text: "",
+};
+
 let transporter = nodemailer.createTransport({
   service: "Gmail",
   auth: {
@@ -33,7 +40,7 @@ transporter.verify(function (error, success) {
 app.post("/", (req, res) => {
   const gelenVeri = req.body;
 
-  let bilgiler = {
+  bilgiler = {
     from: "1967selim61@gmail.com",
     to: "selim.eminoglu.9257@gmail.com",
     subject: "Portfolyo Mail Service",
@@ -50,15 +57,17 @@ app.post("/", (req, res) => {
   res.send(JSON.stringify(gelenVeri));
 });
 
-transporter.sendMail(bilgiler, function (error, info) {
-  if (error) {
-    console.log("E-posta gönderme hatası:", error);
-    res.status(500).json({ error: "E-posta gönderme hatası" });
-  } else {
-    console.log("E-posta gönderildi:", info.response);
-    res.status(200).json({ success: "E-posta başarıyla gönderildi" });
-  }
-});
+if (bilgiler.text != "") {
+  transporter.sendMail(bilgiler, function (error, info) {
+    if (error) {
+      console.log("E-posta gönderme hatası:", error);
+      res.status(500).json({ error: "E-posta gönderme hatası" });
+    } else {
+      console.log("E-posta gönderildi:", info.response);
+      res.status(200).json({ success: "E-posta başarıyla gönderildi" });
+    }
+  });
+}
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
