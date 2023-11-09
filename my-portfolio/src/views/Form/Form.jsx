@@ -65,11 +65,12 @@ async function postMailInfo(url, data) {
 }
 
 const onSubmit = async (values, actions) => {
-  postMailInfo("https://my-portfolio-backend-three.vercel.app/", values).then(
-    (response) => {
-      successInfoToast(response.name, response.surname);
-    }
-  );
+  postMailInfo(
+    "https://portfolio-backend-selim-eminoglus-projects.vercel.app/",
+    values
+  ).then((response) => {
+    successInfoToast(response.name, response.surname);
+  });
 
   await new Promise((resolve) => {
     setTimeout(resolve, 1000);
