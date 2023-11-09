@@ -17,6 +17,6 @@
     "devCommand":null,
     "framework":null,
     "installCommand":"npm install",
-    "outputDirectory":".",
+    "outputDirectory":"../my-portfolio/dist",
     "public":true
   }
