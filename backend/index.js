@@ -47,11 +47,10 @@ app.post("/", (req, res) => {
       gelenVeri.message,
   };
 
-  console.log(transporter);
-
   transporter.sendMail(bilgiler, function (error, info) {
-    if (error) throw error;
+    console.log("gönderme bölgesi");
     console.log(info.response);
+    if (error) throw error;
   });
 
   res.send(JSON.stringify(gelenVeri));
