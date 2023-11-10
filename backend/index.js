@@ -45,17 +45,10 @@ app.post("/post", async (req, res) => {
 
   try {
     await transporter.verify();
-    console.log("verify");
 
-    transporter.sendMail(bilgiler, function (error, info) {
-      if (error) {
-        console.log("E-posta gönderme hatası:", error);
-        res.status(500).json({ error: "E-posta gönderme hatası" });
-      } else {
-        console.log("E-posta gönderildi:", info.response);
-        res.status(200).json({ success: "E-posta başarıyla gönderildi" });
-      }
-    });
+    const info = await transporter.sendMail(bilgiler);
+    console.log("E-posta gönderildi:", info.response);
+    res.status(200).json({ success: "E-posta başarıyla gönderildi" });
   } catch (error) {
     console.error("Transporter doğrulama hatası:", error);
     res.status(500).json({ error: "Transporter doğrulama hatası" });
