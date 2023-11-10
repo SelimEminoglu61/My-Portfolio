@@ -6,7 +6,7 @@
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "https://selim-eminoglu-portfolio.vercel.app",
+        "dest": "./index.js",
         "methods":["POST","GET","OPTIONS"],
         "headers":{
           "Access-Control-Allow-Origin": "https://selim-eminoglu-portfolio.vercel.app",
