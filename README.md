@@ -8,6 +8,8 @@ Selim Eminoğlu adına bilgileri,deneyimleri,yetenekleri veya projeleri hakkınd
 
 ### Proje İçindekiler
 
+### Version 1.0.0
+
 ---
 
 #### Front-End:
@@ -41,3 +43,19 @@ Selim Eminoğlu adına bilgileri,deneyimleri,yetenekleri veya projeleri hakkınd
 - **Nodemailer**:Nodemailer, bize backend üzerinden mail atma işlemi yapabileceğimiz araçları ve ayarları sunan kütüphanedir.
 
 - **Nodemon**:Nodemon, backend uygulamamız için değişiklik yaptığımızda bu değişikliği direkt olarak server çalışırken uygulayan bir kütüphanedir. Özellikle geliştirme aşamasında her değişiklik için tekrar server başlatmanın önüne geçer.
+
+### Genel Özellikler
+
+---
+
+- Projeye erişmek için [buraya](https://selim-eminoglu-portfolio.vercel.app/) tıklayabilirsiniz.
+
+- Proje bir SPA(Single Page Application) olarak yayınlanmaktadır. İlerleyen versiyonlarda çoklu sayfa yapısına geçecektir.
+
+- Projede Selim Eminoğlu'na direkt mail atabileceğiniz bir form kısmı bulunmaktadır.
+
+- Bazı başlıklar ,butonlar ve scroll üzerinde animasyonlar bulunmaktadır.
+
+- Proje için önerilerinizi bekliyorum.
+
+- Proje için diğer versiyonları takip etmeyi unutmayın !!!
