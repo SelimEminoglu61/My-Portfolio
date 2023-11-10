@@ -15,19 +15,7 @@ app.use(
 );
 
 app.get("/", (req, res) => {
-  res.json("Hello");
-});
-
-let transporter = nodemailer.createTransport({
-  service: "Gmail",
-  auth: {
-    user: "1967selim61@gmail.com",
-    pass: "xjps lnnh rfmn pfmv",
-  },
-});
-
-transporter.verify(function (error, success) {
-  if (error) throw error;
+  res.json("Server is running");
 });
 
 app.post("/", (req, res) => {
@@ -46,6 +34,18 @@ app.post("/", (req, res) => {
       "\n" +
       gelenVeri.message,
   };
+
+  let transporter = nodemailer.createTransport({
+    service: "Gmail",
+    auth: {
+      user: "1967selim61@gmail.com",
+      pass: "xjps lnnh rfmn pfmv",
+    },
+  });
+
+  transporter.verify(function (error, success) {
+    if (error) throw error;
+  });
 
   transporter.sendMail(bilgiler, function (error, info) {
     if (error) {
