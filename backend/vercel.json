@@ -7,7 +7,7 @@
       {
         "src": "/(.*)",
         "dest": "https://selim-eminoglu-portfolio.vercel.app",
-        "methods":["POST"],
+        "methods":["POST","GET"],
         "headers":{
           "Access-Control-Allow-Origin": "https://selim-eminoglu-portfolio.vercel.app"
         }
