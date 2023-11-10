@@ -5,20 +5,20 @@ const nodemailer = require("nodemailer");
 const cors = require("cors");
 
 app.use(express.json());
-app.use(
-  cors({
-    origin: ["https://selim-eminoglu-portfolio.vercel.app"],
-    methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"],
-    credentials: false,
-  })
-);
+app.use(cors());
 
 app.get("/", (req, res) => {
   res.json("Server is running");
 });
 
-app.post("/", async (req, res) => {
+const postCors = {
+  origin: ["https://selim-eminoglu-portfolio.vercel.app"],
+  methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: false,
+};
+
+app.post("/", cors(postCors), async (req, res) => {
   const gelenVeri = req.body;
 
   let bilgiler = {
@@ -45,7 +45,6 @@ app.post("/", async (req, res) => {
 
   try {
     await transporter.verify();
-    console.log("verify");
 
     const info = await transporter.sendMail(bilgiler);
     console.log("E-posta gönderildi:", info.response);
