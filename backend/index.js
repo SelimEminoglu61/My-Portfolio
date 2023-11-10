@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
   res.json("Server is running");
 });
 
-app.post("/post", (req, res) => {
+app.post("/post", async (req, res) => {
   const gelenVeri = req.body;
 
   let bilgiler = {
@@ -43,20 +43,23 @@ app.post("/post", (req, res) => {
     },
   });
 
-  transporter.verify(function (error, success) {
+  try {
+    await transporter.verify();
     console.log("verify");
-    if (error) throw error;
-  });
 
-  transporter.sendMail(bilgiler, function (error, info) {
-    if (error) {
-      console.log("E-posta gönderme hatası:", error);
-      res.status(500).json({ error: "E-posta gönderme hatası" });
-    } else {
-      console.log("E-posta gönderildi:", info.response);
-      res.status(200).json({ success: "E-posta başarıyla gönderildi" });
-    }
-  });
+    transporter.sendMail(bilgiler, function (error, info) {
+      if (error) {
+        console.log("E-posta gönderme hatası:", error);
+        res.status(500).json({ error: "E-posta gönderme hatası" });
+      } else {
+        console.log("E-posta gönderildi:", info.response);
+        res.status(200).json({ success: "E-posta başarıyla gönderildi" });
+      }
+    });
+  } catch (error) {
+    console.error("Transporter doğrulama hatası:", error);
+    res.status(500).json({ error: "Transporter doğrulama hatası" });
+  }
 
   res.send(JSON.stringify(gelenVeri));
 });
