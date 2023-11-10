@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
   res.json("Server is running");
 });
 
-app.post("/", (req, res) => {
+app.post("/post", (req, res) => {
   const gelenVeri = req.body;
 
   let bilgiler = {
