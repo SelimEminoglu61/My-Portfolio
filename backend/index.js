@@ -53,8 +53,6 @@ app.post("/", cors(postCors), async (req, res) => {
     console.error("Transporter doğrulama hatası:", error);
     res.status(500).json({ error: "Transporter doğrulama hatası" });
   }
-
-  res.send(JSON.stringify(gelenVeri));
 });
 
 const port = process.env.PORT || 3000;
