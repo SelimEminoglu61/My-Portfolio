@@ -7,6 +7,14 @@
       {
         "src": "/(.*)",
         "dest": "/"
+      },
+      {
+        "src":"/post",
+        "dest":"/",
+        "methods":["POST"],
+        "headers":{
+          "Access-Control-Allow-Origin": "https://selim-eminoglu-portfolio.vercel.app"
+        }
       }
     ]
   }
