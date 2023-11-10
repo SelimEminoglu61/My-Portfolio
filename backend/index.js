@@ -5,14 +5,37 @@ const nodemailer = require("nodemailer");
 const cors = require("cors");
 
 app.use(express.json());
-app.use(
-  cors({
-    origin: ["https://selim-eminoglu-portfolio.vercel.app"],
-    methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"],
-    credentials: false,
-  })
-);
+
+const allowCors = (fn) => async (req, res) => {
+  res.setHeader("Access-Control-Allow-Credentials", true);
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "https://selim-eminoglu-portfolio.vercel.app"
+  );
+  res.setHeader(
+    "Access-Control-Allow-Methods",
+    "GET,OPTIONS,PATCH,DELETE,POST,PUT"
+  );
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
+  );
+  if (req.method === "OPTIONS") {
+    res.status(200).end();
+    return;
+  }
+  return await fn(req, res);
+};
+app.use(allowCors);
+
+// app.use(
+//   cors({
+//     origin: ["https://selim-eminoglu-portfolio.vercel.app"],
+//     methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+//     allowedHeaders: ["Content-Type", "Authorization"],
+//     credentials: false,
+//   })
+// );
 
 app.get("/", (req, res) => {
   res.json("Server is running");
