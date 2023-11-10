@@ -5,14 +5,14 @@ const nodemailer = require("nodemailer");
 const cors = require("cors");
 
 app.use(express.json());
-app.use(cors());
-
-// {
-//   origin: ["https://selim-eminoglu-portfolio.vercel.app"],
-//   methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
-//   allowedHeaders: ["Content-Type", "Authorization"],
-//   credentials: false,
-// }
+app.use(
+  cors({
+    origin: ["https://selim-eminoglu-portfolio.vercel.app"],
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: false,
+  })
+);
 
 app.get("/", (req, res) => {
   res.json("Server is running");
