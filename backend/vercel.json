@@ -9,7 +9,8 @@
         "dest": "https://selim-eminoglu-portfolio.vercel.app",
         "methods":["POST","GET","OPTIONS"],
         "headers":{
-          "Access-Control-Allow-Origin": "https://selim-eminoglu-portfolio.vercel.app"
+          "Access-Control-Allow-Origin": "https://selim-eminoglu-portfolio.vercel.app",
+          "Access-Control-Allow-Headers":["Content-Type"]
         }
       }
     ]
