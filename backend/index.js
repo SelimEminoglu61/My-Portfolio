@@ -35,6 +35,7 @@ app.post("/post", (req, res) => {
       gelenVeri.message,
   };
 
+  console.log(bilgiler);
   let transporter = nodemailer.createTransport({
     service: "Gmail",
     auth: {
