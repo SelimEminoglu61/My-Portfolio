@@ -48,7 +48,7 @@ app.post("/", cors(postCors), async (req, res) => {
 
     const info = await transporter.sendMail(bilgiler);
     console.log("E-posta gönderildi:", info.response);
-    res.status(200).json({ success: "E-posta başarıyla gönderildi" });
+    res.send(JSON.stringify(gelenVeri));
   } catch (error) {
     console.error("Transporter doğrulama hatası:", error);
     res.status(500).json({ error: "Transporter doğrulama hatası" });
