@@ -118,18 +118,18 @@
 
 @media (max-width: 307px) {
   .textDiv {
-    margin-left: -2rem;
+    margin-right: 2rem;
   }
 }
 
 @media (max-width: 284px) {
   .textDiv {
-    margin-left: -4rem;
+    margin-right: 4rem;
   }
 }
 
 @media (max-width: 262px) {
   .textDiv {
-    margin-left: -6rem;
+    margin-right: 6rem;
   }
 }
