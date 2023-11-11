@@ -29,9 +29,8 @@
 .titleWhite {
   color: #eee;
   background-color: #053b50;
-  width: 400px;
-  margin-left: -17rem;
-  text-align: end;
+  margin-right: 2rem;
+  text-align: start;
   font-size: 40pt;
 }
 
@@ -107,6 +106,12 @@
   }
   .titleDiv {
     justify-content: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .titleWhite {
+    width: 130px;
   }
 }
 
