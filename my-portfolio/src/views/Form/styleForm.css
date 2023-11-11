@@ -44,14 +44,15 @@ form > div {
   margin-top: -1rem;
   margin-left: 4rem;
 }
-@media (max-width: 405px) {
-  form {
-    width: 100%;
+
+@media only screen and (max-width: 274px) {
+  form > div {
+    margin-left: 2rem;
   }
 }
 
-@media (max-width: 274px) {
-  form > div {
-    margin-left: 2rem;
+@media only screen and (max-width: 405px) {
+  form {
+    width: 100%;
   }
 }

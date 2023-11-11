@@ -142,13 +142,13 @@
   margin-top: 0.3rem;
 }
 
-@media (max-width: 307px) {
+@media only screen and (max-width: 307px) {
   .bigTitle {
     font-size: 20pt;
   }
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .hamMenu {
     display: block;
   }

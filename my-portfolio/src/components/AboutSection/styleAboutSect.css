@@ -132,7 +132,13 @@
   font-size: 15pt;
 }
 
-@media (max-width: 1045px) {
+@media only screen and (max-width: 274px) {
+  .projectDiv > a > img {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1045px) {
   .projectDiv > p {
     margin-top: 1rem;
   }
@@ -147,10 +153,5 @@
   }
   .aboutText > p {
     margin-left: 1rem;
-  }
-}
-@media (max-width: 274px) {
-  .projectDiv > a > img {
-    display: none;
   }
 }
