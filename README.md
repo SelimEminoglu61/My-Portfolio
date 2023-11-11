@@ -8,8 +8,6 @@ Selim Eminoğlu adına bilgileri,deneyimleri,yetenekleri veya projeleri hakkınd
 
 ### Proje İçindekiler
 
-### Version 1.0.0
-
 ---
 
 #### Front-End:
