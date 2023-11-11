@@ -37,25 +37,7 @@
   height: 150px;
 }
 
-@media only screen and (max-width: 425px) {
-  .listText {
-    padding-left: 2rem;
-  }
-}
-
-@media only screen and (max-width: 895px) {
-  .listText {
-    padding-left: 7rem;
-  }
-}
-
-@media only screen and (max-width: 990px) {
-  .listText {
-    padding-left: 9rem;
-  }
-}
-
-@media only screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
   .reverseLi {
     flex-direction: column-reverse;
     align-items: center;
@@ -69,5 +51,23 @@
   .listText {
     width: 100%;
     padding-left: 10rem;
+  }
+}
+
+@media (max-width: 990px) {
+  .listText {
+    padding-left: 9rem;
+  }
+}
+
+@media (max-width: 895px) {
+  .listText {
+    padding-left: 7rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .listText {
+    padding-left: 2rem;
   }
 }

@@ -54,8 +54,6 @@ Selim Eminoğlu adına bilgileri,deneyimleri,yetenekleri veya projeleri hakkınd
 
 - Bazı başlıklar ,butonlar ve scroll üzerinde animasyonlar bulunmaktadır.
 
-- Proje responsive tasarıma uygun yapılmıştır.
-
 - Proje için önerilerinizi bekliyorum.
 
 - Proje için diğer versiyonları takip etmeyi unutmayın !!!

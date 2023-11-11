@@ -35,20 +35,13 @@
   width: 70px;
 }
 
-@media only screen and (max-width: 274px) {
-  .infoList > li > p {
-    width: 150px;
-    overflow-wrap: break-word;
+@media (max-width: 1024px) {
+  .infoList > li {
+    margin-left: calc(100% - 30rem);
   }
 }
 
-@media only screen and (max-width: 330px) {
-  .infoList > li > p {
-    font-size: 15pt;
-  }
-}
-
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .infoList > li {
     flex-direction: column;
     gap: 1rem;
@@ -56,8 +49,15 @@
   }
 }
 
-@media only screen and (max-width: 1024px) {
-  .infoList > li {
-    margin-left: calc(100% - 30rem);
+@media (max-width: 330px) {
+  .infoList > li > p {
+    font-size: 15pt;
+  }
+}
+
+@media (max-width: 274px) {
+  .infoList > li > p {
+    width: 150px;
+    overflow-wrap: break-word;
   }
 }
