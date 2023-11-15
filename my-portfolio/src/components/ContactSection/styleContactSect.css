@@ -53,7 +53,7 @@
   .infoList > li {
     width: 100%;
   }
-  .infoList > li > p {
+  .infoList > li {
     font-size: 15pt;
   }
 }
