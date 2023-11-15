@@ -50,6 +50,9 @@
 }
 
 @media (max-width: 330px) {
+  .infoList > li {
+    width: 100%;
+  }
   .infoList > li > p {
     font-size: 15pt;
   }
