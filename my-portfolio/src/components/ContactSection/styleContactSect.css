@@ -55,7 +55,9 @@
   }
   .infoList > li > p {
     width: 80%;
-    word-break: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     text-align: center;
   }
 }
