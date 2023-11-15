@@ -53,7 +53,9 @@
   .infoList > li {
     width: 100%;
   }
-  .infoList {
-    font-size: 15pt;
+  .infoList > li > p {
+    width: 80%;
+    overflow-wrap: break-word;
+    text-align: center;
   }
 }
