@@ -105,36 +105,16 @@
     display: none;
   }
   .titleDiv {
+    width: 100%;
     justify-content: center;
+  }
+  .textDiv {
+    margin-left: 0rem;
   }
 }
 
 @media (max-width: 360px) {
   .titleWhite {
     width: 130px;
-  }
-}
-
-@media (max-width: 330px) {
-  .textDiv {
-    margin-left: 0rem;
-  }
-}
-
-@media (max-width: 307px) {
-  .textDiv {
-    margin-right: 2rem;
-  }
-}
-
-@media (max-width: 284px) {
-  .textDiv {
-    margin-right: 4rem;
-  }
-}
-
-@media (max-width: 262px) {
-  .textDiv {
-    margin-right: 6rem;
   }
 }
