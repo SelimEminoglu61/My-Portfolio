@@ -56,4 +56,4 @@ Selim Eminoğlu adına bilgileri,deneyimleri,yetenekleri veya projeleri hakkınd
 
 - Proje için önerilerinizi bekliyorum.
 
-- Proje için diğer versiyonları takip etmeyi unutmayın !!!
+- Projenin diğer versiyonları için takip etmeyi unutmayın !!!
