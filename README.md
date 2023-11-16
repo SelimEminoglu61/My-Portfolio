@@ -6,7 +6,7 @@ Portfolio Project With React
 
 Selim Eminoğlu adına bilgileri,deneyimleri,yetenekleri veya projeleri hakkında bilgi verebilecek bir platform ortaya koymak.Ayrıca kendi portfolyo sitesi için çalışmalar sağlamaktır.
 
-### Proje İçindekiler
+### Proje İçindekiler (V 1.0.0)
 
 ---
 
@@ -42,7 +42,7 @@ Selim Eminoğlu adına bilgileri,deneyimleri,yetenekleri veya projeleri hakkınd
 
 - **Nodemon**:Nodemon, backend uygulamamız için değişiklik yaptığımızda bu değişikliği direkt olarak server çalışırken uygulayan bir kütüphanedir. Özellikle geliştirme aşamasında her değişiklik için tekrar server başlatmanın önüne geçer.
 
-### Genel Özellikler
+### Genel Özellikler (V 1.0.0)
 
 ---
 
