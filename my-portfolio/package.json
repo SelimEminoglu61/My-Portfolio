@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "proxy":"https://my-portfolio-backend-three.vercel.app/",
+  "proxy": "https://my-portfolio-backend-three.vercel.app/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -16,6 +16,7 @@
     "intersection-observer": "^0.12.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^7.3.0",
     "react-scroll": "^1.8.9",
     "react-toastify": "^9.1.3",
     "rollup-plugin-terser": "^7.0.2",
