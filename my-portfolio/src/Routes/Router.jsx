@@ -6,10 +6,10 @@ import ContactPage from "../pages/ContactPage";
 
 const Router = () => {
   const routes = useRoutes([
-    { path: "/", Element: <MainPage /> },
-    { path: "/about", Element: <AboutPage /> },
-    { path: "/contact", Element: <ContactPage /> },
-    { path: "/experience", Element: <ExpPage /> },
+    { path: "/", element: <MainPage /> },
+    { path: "/about", element: <AboutPage /> },
+    { path: "/contact", element: <ContactPage /> },
+    { path: "/experience", element: <ExpPage /> },
   ]);
   return routes;
 };

@@ -1,14 +1,14 @@
 import Header from "../components/Header/Header";
+import ExperienceSect from "../components/ExperienceSection/ExperienceSect";
 import BottomArrow from "../components/BottomArrow/BottomArrow";
-import TitleSect from "../components/TitleSection/TitleSect";
 import "../assets/css/style.css";
-function MainPage() {
+function ExpPage() {
   return (
     <div className="background">
       {" "}
-      <Header /> <TitleSect /> <BottomArrow />
+      <Header /> <BottomArrow /> <ExperienceSect />{" "}
     </div>
   );
 }
 
-export default MainPage;
+export default ExpPage;

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-scroll";
+import { Link } from "react-router";
 import "./styleHeader.css";
 
 function Header() {
@@ -20,44 +20,16 @@ function Header() {
       </div>
       <div className="navbar">
         <ul className="navbarList">
-          <Link
-            href="#"
-            to="home"
-            spy={true}
-            smooth={true}
-            duration={500}
-            offset={-70}
-          >
+          <Link to="/">
             <li>Home</li>
           </Link>
-          <Link
-            href="#"
-            to="about"
-            spy={true}
-            smooth={true}
-            duration={500}
-            offset={-90}
-          >
+          <Link to="/about">
             <li>About</li>
           </Link>
-          <Link
-            href="#"
-            to="experience"
-            spy={true}
-            smooth={true}
-            duration={500}
-            offset={-90}
-          >
+          <Link to="/experience">
             <li>Experience</li>
           </Link>
-          <Link
-            href="#"
-            to="contact"
-            spy={true}
-            smooth={true}
-            duration={500}
-            offset={-90}
-          >
+          <Link to="/contact">
             <li>Contact</li>
           </Link>
         </ul>
@@ -68,40 +40,16 @@ function Header() {
       {isOpenMenu && (
         <div className="burgerList">
           <ul>
-            <Link
-              to="home"
-              spy={true}
-              smooth={true}
-              duration={500}
-              offset={-70}
-            >
+            <Link to="/">
               <li>Home</li>
             </Link>
-            <Link
-              to="about"
-              spy={true}
-              smooth={true}
-              duration={500}
-              offset={-90}
-            >
+            <Link to="/about">
               <li>About</li>
             </Link>
-            <Link
-              to="experience"
-              spy={true}
-              smooth={true}
-              duration={500}
-              offset={-90}
-            >
+            <Link to="/experience">
               <li>Experience</li>
             </Link>
-            <Link
-              to="contact"
-              spy={true}
-              smooth={true}
-              duration={500}
-              offset={-90}
-            >
+            <Link to="/contact">
               <li>Contact</li>
             </Link>
           </ul>

@@ -1,11 +1,10 @@
 import React from "react";
-import Page from "./pages/Page";
+import Router from "./Routes/router";
 import "./assets/css/style.css";
 function App() {
   return (
     <>
-      {" "}
-      <Page />{" "}
+      <Router />
     </>
   );
 }
