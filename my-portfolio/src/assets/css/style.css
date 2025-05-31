@@ -11,8 +11,8 @@
 }
 
 .background {
-  background-image: url("/images/foto-1.webp");
-  background-size: cover;
+  background-image: url("../images/backgr-0.jpeg");
+  background-size: 30%;
   background-position: center;
   min-height: 100vh;
 }

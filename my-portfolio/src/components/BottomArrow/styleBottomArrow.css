@@ -1,8 +1,5 @@
 .arrowDiv {
   display: flex;
   justify-content: center;
-}
-
-.arrowDown {
-  width: 100px;
+  margin-top: 1em;
 }

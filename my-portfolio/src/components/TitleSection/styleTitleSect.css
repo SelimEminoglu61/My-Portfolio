@@ -1,10 +1,12 @@
 .backgroundTitle {
-  background-size: cover;
-  background-image: url("/images/foto-3.webp");
+  background-size: 50%;
+  background-image: url("../../assets/images/backgr-2.jpeg");
   min-height: 590px;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom: solid #eee 20px;
+  overflow: hidden;
 }
 
 .titleDiv {
@@ -21,13 +23,19 @@
   margin-left: 2rem;
 }
 
+.borderText {
+  border-style: solid;
+  border-color: white;
+  border-width: 20px;
+}
+
 .titleBlue {
   color: #64ccc5;
   font-size: 40pt;
 }
 
 .titleWhite {
-  color: #eee;
+  color: #0528ee;
   background-color: #053b50;
   margin-right: 2rem;
   text-align: start;
@@ -35,14 +43,14 @@
 }
 
 .titleJob {
-  color: #eee;
+  color: #0528ee;
   font-size: 30pt;
   font-style: italic;
 }
 
 .imgDiv {
   width: 50%;
-  background-image: url("/images/titleBackground-not-bg.png");
+  background-image: url("../../assets/images/foto-0.png");
   background-size: cover;
   animation-name: blur-radius;
   animation-duration: 2s;
@@ -52,39 +60,39 @@
 @keyframes blur-radius {
   0% {
     filter: brightness(80%) saturate(100%) hue-rotate(310deg) sepia(0%)
-      invert(0%) opacity(100%) drop-shadow(60px 60px 50px #f22067);
+      invert(0%) opacity(100%) drop-shadow(60px 60px 50px #0528ee);
   }
   15% {
     filter: brightness(80%) saturate(100%) hue-rotate(310deg) sepia(0%)
-      invert(0%) opacity(100%) drop-shadow(60px 60px 80px #f22067);
+      invert(0%) opacity(100%) drop-shadow(60px 60px 80px #0528ee);
   }
   25% {
     filter: brightness(80%) saturate(100%) hue-rotate(310deg) sepia(0%)
-      invert(0%) opacity(100%) drop-shadow(60px 60px 110px #f22067);
+      invert(0%) opacity(100%) drop-shadow(60px 60px 110px #0528ee);
   }
   35% {
     filter: brightness(80%) saturate(100%) hue-rotate(310deg) sepia(0%)
-      invert(0%) opacity(100%) drop-shadow(60px 60px 140px #f22067);
+      invert(0%) opacity(100%) drop-shadow(60px 60px 140px #0528ee);
   }
   50% {
     filter: brightness(80%) saturate(100%) hue-rotate(310deg) sepia(0%)
-      invert(0%) opacity(100%) drop-shadow(60px 60px 180px #f22067);
+      invert(0%) opacity(100%) drop-shadow(60px 60px 180px #0528ee);
   }
   65% {
     filter: brightness(80%) saturate(100%) hue-rotate(310deg) sepia(0%)
-      invert(0%) opacity(100%) drop-shadow(60px 60px 140px #f22067);
+      invert(0%) opacity(100%) drop-shadow(60px 60px 140px #0528ee);
   }
   75% {
     filter: brightness(80%) saturate(100%) hue-rotate(310deg) sepia(0%)
-      invert(0%) opacity(100%) drop-shadow(60px 60px 110px #f22067);
+      invert(0%) opacity(100%) drop-shadow(60px 60px 110px #0528ee);
   }
   85% {
     filter: brightness(80%) saturate(100%) hue-rotate(310deg) sepia(0%)
-      invert(0%) opacity(100%) drop-shadow(60px 60px 80px #f22067);
+      invert(0%) opacity(100%) drop-shadow(60px 60px 80px #0528ee);
   }
   100% {
     filter: brightness(80%) saturate(100%) hue-rotate(310deg) sepia(0%)
-      invert(0%) opacity(100%) drop-shadow(60px 60px 50px #f22067);
+      invert(0%) opacity(100%) drop-shadow(60px 60px 50px #0528ee);
   }
 }
 
