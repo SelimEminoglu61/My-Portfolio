@@ -52,7 +52,7 @@
     transform: scale(1);
   }
 }
-
+/*
 .navbarList {
   display: flex;
   gap: 2rem;
@@ -77,6 +77,7 @@
   background-color: #64ccc5;
   color: #053b50;
 }
+*/
 
 .hamMenu {
   border: 1px solid black;
@@ -84,7 +85,7 @@
   margin-right: 1rem;
   padding-top: 0.2rem;
   height: 38px;
-  display: none;
+  display: block;
 }
 
 .hamMenu > img {

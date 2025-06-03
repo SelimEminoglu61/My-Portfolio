@@ -25,8 +25,38 @@
 
 .borderText {
   border-style: solid;
-  border-color: white;
+  border-color: #eee;
   border-width: 20px;
+  background-color: #eee;
+  border-radius: 20px;
+}
+
+.borderText:hover {
+  animation-name: shakeY;
+  animation-duration: 2s;
+  animation-iteration-count: 2;
+}
+
+@keyframes shakeY {
+  from,
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translate3d(0, -5px, 0);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translate3d(0, 5px, 0);
+  }
 }
 
 .titleBlue {
@@ -35,7 +65,7 @@
 }
 
 .titleWhite {
-  color: #0528ee;
+  color: #64ccc5;
   background-color: #053b50;
   margin-right: 2rem;
   text-align: start;
@@ -55,6 +85,34 @@
   animation-name: blur-radius;
   animation-duration: 2s;
   animation-iteration-count: infinite;
+}
+
+.imgDiv:hover {
+  animation-name: shakeX;
+  animation-duration: 2s;
+  animation-iteration-count: 2;
+}
+
+@keyframes shakeX {
+  from,
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translate3d(-5px, 0, 0);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translate3d(5px, 0, 0);
+  }
 }
 
 @keyframes blur-radius {

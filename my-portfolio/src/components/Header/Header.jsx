@@ -19,6 +19,7 @@ function Header() {
         <h1 className="bigTitle">Selim.Dev</h1>
       </div>
       <div className="navbar">
+        {/*
         <ul className="navbarList">
           <Link to="/">
             <li>Home</li>
@@ -33,6 +34,7 @@ function Header() {
             <li>Contact</li>
           </Link>
         </ul>
+        */}
       </div>
       <div className="hamMenu" onClick={() => isOpenHamMenu()}>
         <img src="/icons/menu.png" alt="icon" />
