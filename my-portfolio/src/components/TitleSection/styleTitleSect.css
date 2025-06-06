@@ -88,15 +88,17 @@
 }
 
 .imgDiv:hover {
-  animation-name: shakeX;
-  animation-duration: 2s;
-  animation-iteration-count: 2;
+  animation-name: scaleİmg;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-delay: 200ms;
+  transition: 10s;
 }
 
-@keyframes shakeX {
+@keyframes scaleİmg {
   from,
   to {
-    transform: translate3d(0, 0, 0);
+    transform: scale(1);
   }
 
   10%,
@@ -104,14 +106,14 @@
   50%,
   70%,
   90% {
-    transform: translate3d(-5px, 0, 0);
+    transform: scale(1.2);
   }
 
   20%,
   40%,
   60%,
   80% {
-    transform: translate3d(5px, 0, 0);
+    transform: scale(1);
   }
 }
 
