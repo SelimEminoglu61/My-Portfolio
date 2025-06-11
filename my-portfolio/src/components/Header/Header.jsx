@@ -34,9 +34,7 @@ function Header() {
           </Link>
         </ul>
       </div>
-      <div className="hamMenu" onClick={() => isOpenHamMenu()}>
-        <img src="/icons/menu.png" alt="icon" />
-      </div>
+      <div className="hamMenu" onClick={() => isOpenHamMenu()}></div>
       {isOpenMenu && (
         <div className="burgerList">
           <ul>

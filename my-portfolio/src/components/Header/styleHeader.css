@@ -80,41 +80,57 @@
 }
 
 .hamMenu {
-  border: 1px solid black;
+  border: 1px solid #000;
   border-radius: 5px;
   margin-right: 1rem;
   padding-top: 0.2rem;
   height: 38px;
+  width: 40px;
   display: none;
+  background-image: url("../../assets/icons/menu-bar-black.png");
+  background-size: cover;
 }
 
-.hamMenu > img {
-  width: 40px;
-  height: 30px;
+.hamMenu:hover {
+  border: 1px solid #1571dd;
+  cursor: pointer;
+  background-image: url("../../assets/icons/menu-bar-blue.png");
+  transition: 1s;
+}
+
+.hamMenu:checked {
+  border: 1px solid #1571dd;
+  cursor: pointer;
+  background-image: url("../../assets/icons/menu-bar-blue.png");
 }
 
 .burgerList {
   position: absolute;
+  border: 10px solid red;
   top: 70px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
+  right: 0px;
+  width: 50%;
+  height: 500px;
   background-color: #053b50;
   color: #eee;
-  animation-name: backInDown;
+  animation-name: backInRight;
   animation-duration: 1s;
 }
 
-@keyframes backInDown {
+.burgerList > ul {
+  height: 100%;
+}
+
+@keyframes backInRight {
   0% {
-    -webkit-transform: translateY(-1200px) scale(0.7);
-    transform: translateY(-1200px) scale(0.7);
+    -webkit-transform: translateX(2000px) scale(0.7);
+    transform: translateX(2000px) scale(0.7);
     opacity: 0.7;
   }
 
   80% {
-    -webkit-transform: translateY(0px) scale(0.7);
-    transform: translateY(0px) scale(0.7);
+    -webkit-transform: translateX(0px) scale(0.7);
+    transform: translateX(0px) scale(0.7);
     opacity: 0.7;
   }
 
