@@ -3,13 +3,16 @@ import { Link } from "react-router";
 import "./styleHeader.css";
 
 function Header() {
+  const [onClickMenu, setOnClickMenu] = useState(false);
   const [isOpenMenu, setIsOpenMenu] = useState(false);
 
   function isOpenHamMenu() {
     if (isOpenMenu == false) {
       setIsOpenMenu(true);
+      setOnClickMenu(true);
     } else {
       setIsOpenMenu(false);
+      setOnClickMenu(false);
     }
   }
 
@@ -34,11 +37,23 @@ function Header() {
           </Link>
         </ul>
       </div>
-      <div className="hamMenu" onClick={() => isOpenHamMenu()}></div>
+      <div
+        className={onClickMenu ? "hamMenuBlue" : "hamMenu"}
+        onClick={() => isOpenHamMenu()}
+      ></div>
       {isOpenMenu && (
         <div className="burgerList">
           <ul>
             <Link to="/">
+              {/* 
+            <img
+                src="../../assets/icons/home.png"
+                alt="hamMenuİcon"
+                width={20}
+                height={20}
+              />
+ 
+            */}
               <li>Home</li>
             </Link>
             <Link to="/about">

@@ -98,7 +98,13 @@
   transition: 1s;
 }
 
-.hamMenu:checked {
+.hamMenuBlue {
+  border-radius: 5px;
+  margin-right: 1rem;
+  padding-top: 0.2rem;
+  height: 38px;
+  width: 40px;
+  background-size: cover;
   border: 1px solid #1571dd;
   cursor: pointer;
   background-image: url("../../assets/icons/menu-bar-blue.png");
@@ -106,7 +112,7 @@
 
 .burgerList {
   position: absolute;
-  border: 10px solid red;
+  border: 2px solid #fff;
   top: 70px;
   right: 0px;
   width: 50%;
@@ -115,10 +121,6 @@
   color: #eee;
   animation-name: backInRight;
   animation-duration: 1s;
-}
-
-.burgerList > ul {
-  height: 100%;
 }
 
 @keyframes backInRight {
@@ -144,19 +146,28 @@
 .burgerList > ul {
   list-style: none;
   display: flex;
+  justify-content: space-around;
   flex-direction: column;
-  gap: 0.2rem;
-  width: 100%;
+  gap: 1rem;
 }
 
 .burgerList > ul > a {
-  border-top: 2px solid black;
+  border: 2px solid black;
   display: flex;
   justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  height: 50px;
+  margin: 3px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #000;
 }
 
-.burgerList > ul > a > li {
-  margin-top: 0.3rem;
+.burgerList > ul > a:hover {
+  transition: 1s;
+  border: 2px solid #fff;
+  background-color: #053b50;
 }
 
 @media (max-width: 307px) {
