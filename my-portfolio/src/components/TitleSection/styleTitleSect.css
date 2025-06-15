@@ -88,33 +88,13 @@
 }
 
 .imgDiv:hover {
-  animation-name: scaleİmg;
-  animation-duration: 5s;
-  animation-iteration-count: 1;
-  animation-delay: 200ms;
-  transition: 10s;
+  transform: scale(1.2);
+  transition: 2s;
 }
 
-@keyframes scaleİmg {
-  from,
-  to {
-    transform: scale(1);
-  }
-
-  10%,
-  30%,
-  50%,
-  70%,
-  90% {
-    transform: scale(1.2);
-  }
-
-  20%,
-  40%,
-  60%,
-  80% {
-    transform: scale(1);
-  }
+.imgDiv:not(:hover) {
+  transform: scale(1);
+  transition: 2s;
 }
 
 @keyframes blur-radius {

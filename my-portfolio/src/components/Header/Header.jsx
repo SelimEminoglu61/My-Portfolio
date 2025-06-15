@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router";
 import "./styleHeader.css";
+import homePng from "../../assets/icons/home.png";
+import userPng from "../../assets/icons/user.png";
+import telephonePng from "../../assets/icons/telephone.png";
+import breifcasePng from "../../assets/icons/briefcase.png";
 
 function Header() {
   const [onClickMenu, setOnClickMenu] = useState(false);
@@ -45,24 +49,29 @@ function Header() {
         <div className="burgerList">
           <ul>
             <Link to="/">
-              {/* 
-            <img
-                src="../../assets/icons/home.png"
-                alt="hamMenuİcon"
-                width={20}
-                height={20}
-              />
- 
-            */}
+              <img src={homePng} alt="hamHomeButton" width={20} height={20} />
               <li>Home</li>
             </Link>
             <Link to="/about">
+              <img src={userPng} alt="hamUserButton" width={20} height={20} />
               <li>About</li>
             </Link>
             <Link to="/experience">
+              <img
+                src={telephonePng}
+                alt="hamTelephoneButton"
+                width={20}
+                height={20}
+              />
               <li>Experience</li>
             </Link>
             <Link to="/contact">
+              <img
+                src={breifcasePng}
+                alt="hamBriefcaseButton"
+                width={20}
+                height={20}
+              />
               <li>Contact</li>
             </Link>
           </ul>

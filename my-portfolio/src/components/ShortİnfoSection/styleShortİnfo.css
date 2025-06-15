@@ -1,0 +1,7 @@
+.backgrDiv {
+  display: flex;
+  justify-self: center;
+  background-color: #fff;
+  color: #000;
+  width: 60%;
+}
