@@ -65,11 +65,29 @@
 }
 
 .titleWhite {
+  border-right: solid 3px #64ccc5;
+  white-space: nowrap;
   color: #64ccc5;
   background-color: #053b50;
-  margin-right: 2rem;
   text-align: start;
   font-size: 40pt;
+  animation: typing 10s steps(40) infinite both,
+    cursor 0.4s step-end infinite alternate;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
 }
 
 .titleJob {

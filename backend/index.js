@@ -1,3 +1,9 @@
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+
+require("dotenv").config();
+
+import { Octokit } from "octokit";
 const express = require("express");
 const app = express();
 const nodemailer = require("nodemailer");
@@ -5,6 +11,20 @@ const cors = require("cors");
 
 app.use(express.json());
 app.use(cors());
+
+const octokit = new Octokit({
+  auth: process.env.API_KEY,
+});
+
+const projects = await octokit.request("GET /user/repos", {
+  headers: {
+    "X-GitHub-Api-Version": "2022-11-28",
+  },
+});
+
+app.get("/api/myprojects", (req, res) => {
+  res.send(projects);
+});
 
 app.get("/", (req, res) => {
   res.json("Server is running");
@@ -56,5 +76,5 @@ app.post("/", cors(postCors), async (req, res) => {
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
-  console.log(`Sunucu ${port} portunda çalışıyor.`);
+  console.log(`Sunucu ${port} portunda çalışıyor. Link: http://localhost:3000`);
 });
