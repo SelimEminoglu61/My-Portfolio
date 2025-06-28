@@ -16,6 +16,30 @@
   width: 80%;
 }
 
+.sortDiv > p {
+  font-weight: 700;
+  color: #fff;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.sortSelect {
+  border: 2px solid #053b50;
+  border-radius: 20px;
+  padding: 0.5em 1em 0.5em 1em;
+  background-color: #64ccc5;
+  color: #fff;
+  font-size: medium;
+  font-weight: 600;
+}
+
+.sortSelect:hover {
+  background-color: #053b50;
+  cursor: pointer;
+}
+
 .myProjectsDiv {
   width: 80%;
   display: flex;
@@ -81,6 +105,15 @@
 
 .projectİnfo:hover {
   opacity: 1;
+  transform: scale(1.05);
+  cursor: pointer;
+  transition: 1s;
+  box-shadow: 10px 10px 5px #053b50;
+}
+
+.projectİnfo:not(:hover) {
+  transition: 1s;
+  transform: scale(1);
 }
 
 .projectNumber {
@@ -100,4 +133,13 @@
 
 .projectNumber:hover {
   opacity: 1;
+  transform: scale(1.05);
+  cursor: pointer;
+  transition: 1s;
+  box-shadow: 10px 10px 5px #053b50;
+}
+
+.projectNumber:not(:hover) {
+  transition: 1s;
+  transform: scale(1);
 }

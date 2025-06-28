@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 function ShortİnfoSection() {
   const [myProjects, setMyProjects] = useState([]);
-  const [sortType, setSortType] = useState("0");
+  const [sortType, setSortType] = useState("1");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -12,39 +12,62 @@ function ShortİnfoSection() {
         const response = await fetch("http://localhost:3000/api/myprojects");
         const data = await response.json();
 
-        if (sortType == "0") {
-          setMyProjects(data.data);
-        } else if (sortType == "1") {
+        if (sortType == "1") {
           const takeArr = data.data;
-          console.log(takeArr);
-          const lastDate = [];
-          const bigDate = Date.parse(takeArr[1].updated_at);
-          const firstDate = Date.parse(takeArr[0].updated_at);
-          let indexDate = 0;
 
-          for (let i = 0; i <= takeArr.length; i++) {
-            for (let i = 0; i < takeArr.length; i++) {
-              if (firstDate > Date.parse(takeArr[i].updated_at)) {
-                bigDate == firstDate;
-              } else {
-                firstDate == Date.parse(takeArr[i].updated_at);
-              }
+          const sorted = [...takeArr].sort(
+            (a, b) => new Date(b.updated_at) - new Date(a.updated_at)
+          );
 
-              if (firstDate > bigDate) {
-                indexDate = takeArr.findIndex(
-                  (item) => item.updated_at == firstDate
-                );
-                lastDate.push(...takeArr.splice(indexDate, 1));
-              } else {
-                indexDate = takeArr.findIndex(
-                  (item) => item.updated_at == bigDate
-                );
-                lastDate.push(...takeArr.splice(indexDate, 1));
-              }
-            }
-          }
+          setMyProjects(sorted);
+        } else if (sortType == "2") {
+          const takeArr = data.data;
 
-          setMyProjects(lastDate);
+          const sorted = [...takeArr].sort(
+            (a, b) => new Date(a.updated_at) - new Date(b.updated_at)
+          );
+
+          setMyProjects(sorted);
+        } else if (sortType == "3") {
+          const takeArr = data.data;
+
+          const sorted = [...takeArr].sort((a, b) =>
+            a.name.localeCompare(b.name)
+          );
+
+          setMyProjects(sorted);
+        } else if (sortType == "4") {
+          const takeArr = data.data;
+
+          const sorted = [...takeArr].sort((a, b) =>
+            b.name.localeCompare(a.name)
+          );
+
+          setMyProjects(sorted);
+        } else if (sortType == "5") {
+          const takeArr = data.data;
+
+          const sorted = [...takeArr].sort(
+            (a, b) =>
+              b.forks +
+              b.open_issues +
+              b.watchers -
+              (a.forks + a.open_issues + a.watchers)
+          );
+
+          setMyProjects(sorted);
+        } else if (sortType == "6") {
+          const takeArr = data.data;
+
+          const sorted = [...takeArr].sort(
+            (a, b) =>
+              a.forks +
+              a.open_issues +
+              a.watchers -
+              (b.forks + b.open_issues + b.watchers)
+          );
+
+          setMyProjects(sorted);
         }
       } catch (err) {
         console.log("hata", err);
@@ -66,11 +89,17 @@ function ShortİnfoSection() {
       <div className="sortDiv">
         <p>
           Sort:{" "}
-          <select className="sortSelect" onChange={handleSelect}>
-            <option value="0">Default</option>
-            <option value="1">Update Time</option>
-            <option value="2">Alphabetic</option>
-            <option value="3">Score</option>
+          <select
+            className="sortSelect"
+            name="sortSelect"
+            onChange={handleSelect}
+          >
+            <option value="1">Update Time(Close to Far)</option>
+            <option value="2">Update Time(Far to Close)</option>
+            <option value="3">Alphabetic(A-Z)</option>
+            <option value="4">Alphabetic(Z-A)</option>
+            <option value="5">Score(High to Low)</option>
+            <option value="6">Score(Low to High)</option>
           </select>
         </p>
       </div>

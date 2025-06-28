@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
 .backgroundTitle {
   background-size: 50%;
   background-image: url("../../assets/images/backgr-2.jpeg");
@@ -62,6 +64,7 @@
 .titleBlue {
   color: #64ccc5;
   font-size: 40pt;
+  font-family: "Inter", monospace;
 }
 
 .titleWhite {
@@ -70,9 +73,11 @@
   color: #64ccc5;
   background-color: #053b50;
   text-align: start;
+  font-family: "Inter", monospace;
   font-size: 40pt;
-  animation: typing 10s steps(40) infinite both,
-    cursor 0.4s step-end infinite alternate;
+  overflow: hidden;
+  box-sizing: content-box;
+  animation: typing 6s steps(6) infinite, cursor 0.8s infinite alternate;
 }
 
 @keyframes typing {
@@ -80,7 +85,7 @@
     width: 0;
   }
   to {
-    width: 100%;
+    width: 6ch;
   }
 }
 
