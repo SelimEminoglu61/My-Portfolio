@@ -82,51 +82,53 @@ function ShortİnfoSection() {
   }
 
   return (
-    <div className="backgrDiv">
-      <div className="midTitleDiv">
-        <h3>My Projects</h3>
-      </div>
-      <div className="sortDiv">
-        <p>
-          Sort:{" "}
-          <select
-            className="sortSelect"
-            name="sortSelect"
-            onChange={handleSelect}
-          >
-            <option value="1">Update Time(Close to Far)</option>
-            <option value="2">Update Time(Far to Close)</option>
-            <option value="3">Alphabetic(A-Z)</option>
-            <option value="4">Alphabetic(Z-A)</option>
-            <option value="5">Score(High to Low)</option>
-            <option value="6">Score(Low to High)</option>
-          </select>
-        </p>
-      </div>
-      <div className="myProjectsDiv">
-        {myProjects.map((projects, i) => {
-          return (
-            <div key={i} className="projectsLine">
-              <div className="projectİnfo">
-                <h3>{projects.name.toUpperCase()}</h3>
-                <p>{projects.description}</p>
-                <p>Last Update: {projects.updated_at.slice(0, 10)}</p>
-                <p>
-                  Want to see more{" "}
-                  <a href={projects.html_url} target="_blank">
-                    click
-                  </a>{" "}
-                  here.
-                </p>
+    <div className="container">
+      <div className="backgrDiv">
+        <div className="midTitleDiv">
+          <h3>My Projects</h3>
+        </div>
+        <div className="sortDiv">
+          <p>
+            Sort:{" "}
+            <select
+              className="sortSelect"
+              name="sortSelect"
+              onChange={handleSelect}
+            >
+              <option value="1">Update Time(Close to Far)</option>
+              <option value="2">Update Time(Far to Close)</option>
+              <option value="3">Alphabetic(A-Z)</option>
+              <option value="4">Alphabetic(Z-A)</option>
+              <option value="5">Score(High to Low)</option>
+              <option value="6">Score(Low to High)</option>
+            </select>
+          </p>
+        </div>
+        <div className="myProjectsDiv">
+          {myProjects.map((projects, i) => {
+            return (
+              <div key={i} className="projectsLine">
+                <div className="projectİnfo">
+                  <h3>{projects.name.toUpperCase()}</h3>
+                  <p>{projects.description}</p>
+                  <p>Last Update: {projects.updated_at.slice(0, 10)}</p>
+                  <p>
+                    Want to see more{" "}
+                    <a href={projects.html_url} target="_blank">
+                      click
+                    </a>{" "}
+                    here.
+                  </p>
+                </div>
+                <div className="projectNumber">
+                  <p>Forks: {projects.forks}</p>
+                  <p>Watchers: {projects.watchers}</p>
+                  <p>İssues: {projects.open_issues}</p>
+                </div>
               </div>
-              <div className="projectNumber">
-                <p>Forks: {projects.forks}</p>
-                <p>Watchers: {projects.watchers}</p>
-                <p>İssues: {projects.open_issues}</p>
-              </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </div>
   );
