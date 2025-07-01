@@ -58,28 +58,7 @@ function AboutSect() {
             </p>
           </div>
         </div>
-        <div className="projectDiv">
-          <p>
-            Later, my projects will be added.For now, you can visit to my github
-            account and look at all my projects.When they added, "Projects" area
-            will be added on this page.{" "}
-          </p>
-          <a href="https://github.com/SelimEminoglu61" target="_blank">
-            <img
-              src="/icons/github.png"
-              alt="icon"
-              data-src="/icons/github.png"
-              loading="lazy"
-            />
-            Go To My Github Account
-            <img
-              src="/icons/right-arrow.png"
-              alt="icon"
-              data-src="/icons/right-arrow.png"
-              loading="lazy"
-            />
-          </a>
-        </div>
+
         <div className="skillTitle">
           <h3>Skills</h3>
         </div>

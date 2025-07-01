@@ -6,21 +6,19 @@
 
 .aboutDetail {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
 }
 
 .aboutİmg > img {
   width: 180px;
   filter: brightness(80%);
-  margin-left: 1rem;
 }
 
 .aboutText > p {
   color: #eee;
   font-size: 14pt;
-  margin-right: 1rem;
   text-align: center;
 }
 
