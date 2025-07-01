@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 import "./styleFooter.css";
 import "../../assets/css/style.css";
 
@@ -9,6 +11,20 @@ import linkedPng from "../../assets/icons/linkedin_small.png";
 import wpPng from "../../assets/icons/whatsapp_small.png";
 
 function Footer() {
+  const [myNumber, setMyNumber] = useState("");
+
+  useEffect(() => {
+    const fetchNumber = async () => {
+      try {
+        const response = await fetch("http://localhost:3000/api/contact");
+        const data = await response.json();
+        setMyNumber(data);
+      } catch (err) {
+        console.log("hata", err);
+      }
+    };
+  }, []);
+
   return (
     <div className="footerDiv">
       <div className="container">
@@ -19,15 +35,27 @@ function Footer() {
               <ul>
                 <li>
                   <img src={instaPng} alt="instaLogo" />
-                  İnstagram
+                  <a
+                    href="https://www.instagram.com/selimeminoglu/"
+                    target="_blank"
+                  >
+                    İnstagram
+                  </a>
                 </li>
                 <li>
                   <img src={twitPng} alt="twitLogo" />
-                  Twitter
+                  <a href="https://x.com/SelimEminolu3" target="_blank">
+                    Twitter
+                  </a>
                 </li>
                 <li>
                   <img src={facePng} alt="faceLogo" />
-                  Facebook
+                  <a
+                    href="https://www.facebook.com/selim.eminoglu.92?locale=tr_TR"
+                    target="_blank"
+                  >
+                    Facebook
+                  </a>
                 </li>
               </ul>
             </div>
@@ -36,15 +64,24 @@ function Footer() {
               <ul>
                 <li>
                   <img src={githubPng} alt="githubLogo" />
-                  Github
+                  <a href="https://github.com/SelimEminoglu61" target="_blank">
+                    Github
+                  </a>
                 </li>
                 <li>
                   <img src={linkedPng} alt="linkedinLogo" />
-                  Linkedin
+                  <a
+                    href="https://www.linkedin.com/in/selim-eminoglu/"
+                    target="_blank"
+                  >
+                    Linkedin
+                  </a>
                 </li>
                 <li>
                   <img src={wpPng} alt="wpLogo" />
-                  Whatsapp
+                  <a href={`https://wa.me/${myNumber}`} target="_blank">
+                    Whatsapp
+                  </a>
                 </li>
               </ul>
             </div>

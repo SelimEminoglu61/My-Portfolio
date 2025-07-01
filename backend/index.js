@@ -22,6 +22,10 @@ const projects = await octokit.request("GET /user/repos", {
   },
 });
 
+app.get("/api/contact", (req, res) => {
+  res.send(process.env.MY_NUMBER);
+});
+
 app.get("/api/myprojects", (req, res) => {
   res.send(projects);
 });
