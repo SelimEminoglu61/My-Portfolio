@@ -6,87 +6,55 @@
 
 .aboutDetail {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 2em;
+  margin: 1em 0.5em;
 }
 
 .aboutİmg > img {
-  width: 180px;
+  width: 150px;
+  height: 150px;
+  border: 2px solid #053b50;
+  border-radius: 20px;
   filter: brightness(80%);
+  margin-left: 1em;
 }
 
 .aboutText > p {
   color: #eee;
   font-size: 14pt;
   text-align: center;
+  margin-right: 1em;
 }
 
-.projectDiv {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-
-.projectDiv > p {
-  color: #eee;
-  font-size: 14pt;
-  margin-right: 2rem;
-  margin-left: 2rem;
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-.projectDiv > a {
-  border: 2px solid black;
-  border-radius: 10px;
-  text-decoration: none;
-  color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  background-color: #eee;
-}
-
-.projectDiv > a:hover {
-  animation-name: pulse;
-  animation-duration: 2s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-}
-
-@keyframes pulse {
-  from {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-
-  50% {
-    -webkit-transform: scale3d(1.05, 1.05, 1.05);
-    transform: scale3d(1.05, 1.05, 1.05);
-  }
-
-  to {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-}
-.projectDiv > a > img {
-  width: 50px;
-}
-
-.skillTitle {
+.smallTitle {
   display: flex;
   justify-content: center;
 }
 
-.skillTitle > h3 {
+.smallTitle > h3 {
   font-size: 24pt;
   color: #eee;
+}
+
+.schoolList {
+  margin: 1em 0.5em;
+  border: 2px solid black;
+  display: flex;
+  justify-self: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 80%;
+  gap: 2em;
+  list-style: url("../../assets/icons/right-arrow.png");
+}
+
+.schoolList > li {
+  width: 45%;
+  height: 200px;
+  border: 3px solid black;
 }
 
 .skillList {

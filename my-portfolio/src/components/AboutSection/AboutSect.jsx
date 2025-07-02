@@ -1,4 +1,7 @@
 import { useEffect } from "react";
+
+import ppCV from "../../assets/images/pp-cv.webp";
+
 import "./styleAboutSect.css";
 import "../../assets/css/style.css";
 
@@ -36,12 +39,7 @@ function AboutSect() {
         </div>
         <div className="aboutDetail">
           <div className="aboutİmg">
-            <img
-              src="/images/pp-cv.webp"
-              alt="image"
-              data-src="/images/pp-cv.webp"
-              loading="lazy"
-            />
+            <img src={ppCV} alt="image" data-src={ppCV} loading="lazy" />
           </div>
           <div className="aboutText">
             <p>
@@ -59,7 +57,14 @@ function AboutSect() {
           </div>
         </div>
 
-        <div className="skillTitle">
+        <div className="smallTitle">
+          <h3>Education</h3>
+        </div>
+        <ul className="schoolList">
+          <li>Marmara</li>
+          <li>Buca </li>
+        </ul>
+        <div className="smallTitle">
           <h3>Skills</h3>
         </div>
         <ul className="skillList">
