@@ -24,6 +24,30 @@
   gap: 3rem;
 }
 
+.listText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5em;
+  color: #fff;
+}
+
+.listText > h4 {
+  font-size: 14pt;
+}
+
+.listText > ul > li {
+  font-size: 13pt;
+}
+
+.listText > h5 > a {
+  color: #053b50;
+}
+
+.listText > h5 > a:visited {
+  color: #053b50;
+}
+
 .listİmg {
   display: flex;
   justify-content: center;
@@ -31,10 +55,18 @@
 }
 
 .listİmg > img {
-  border: 3px solid #eee;
+  border: 2px solid #053b50;
+  box-shadow: 10px 8px 15px #fff;
   border-radius: 50%;
+  background-color: #fff;
   width: 190px;
-  height: 150px;
+  height: 190px;
+}
+
+.listİmg > img:hover {
+  box-shadow: none;
+  transition: all 0.5s;
+  cursor: pointer;
 }
 
 @media (max-width: 1024px) {

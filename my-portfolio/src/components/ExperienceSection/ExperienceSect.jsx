@@ -1,4 +1,7 @@
 import { useEffect } from "react";
+
+import arvisLogo from "../../assets/images/arvis.png";
+import EterationLogo from "../../assets/images/eteration.png";
 import "./styleExperienceSect.css";
 import "../../assets/css/style.css";
 
@@ -46,7 +49,12 @@ function ExperienceSect() {
             </div>
             <div className="listText">
               <h4>FRONT END DEVELOPER/BOOTCAMP</h4>
-              <h5>Turkcell | 06 March 2023 -13 September 2023</h5>
+              <h5>
+                <a href="https://www.turkcell.com.tr/" target="_blank">
+                  Turkcell
+                </a>{" "}
+                | 06 March 2023 -13 September 2023
+              </h5>
               <ul>
                 <li>
                   Receiving training on HTML5, CSS3, SASS, Bootstrap and
@@ -71,7 +79,12 @@ function ExperienceSect() {
           <li className="reverseLi">
             <div className="listText">
               <h4>INTERN</h4>
-              <h5>Khenda Teknoloji A.Ş. | 03 October 2022 -05 January 2023</h5>
+              <h5>
+                <a href="https://www.khenda.com/tr" target="_blank">
+                  Khenda Teknoloji A.Ş.
+                </a>{" "}
+                | 03 October 2022 -05 January 2023
+              </h5>
               <ul>
                 <li>Obtaining information about analyzes on the process.</li>
                 <li>Labeling and analyzing the video.</li>
@@ -101,15 +114,20 @@ function ExperienceSect() {
           <li className="normalLi">
             <div className="listİmg">
               <img
-                src="/images/arvis-logo.png"
+                src={arvisLogo}
                 alt="logo"
-                data-src="/images/arvis-logo.png"
+                data-src={arvisLogo}
                 loading="lazy"
               />
             </div>
             <div className="listText">
               <h4>ARTIFICIAL INTELLIGENCE R&D INTERN</h4>
-              <h5>Arvis Teknoloji A.Ş. | 25 July-02 September 2022</h5>
+              <h5>
+                <a href="http://www.arvis.com.tr/" target="_blank">
+                  Arvis Teknoloji A.Ş.
+                </a>{" "}
+                | 25 July-02 September 2022
+              </h5>
               <ul>
                 <li>
                   Conducting literature and article research in the field of
@@ -129,7 +147,10 @@ function ExperienceSect() {
             <div className="listText">
               <h4>R&D INTERN</h4>
               <h5>
-                Eteration Bilgi Teknolojileri A.Ş. | 14 March-29 June 2022
+                <a href="https://www.eteration.com/tr" target="_blank">
+                  Eteration Bilgi Teknolojileri A.Ş.
+                </a>{" "}
+                | 14 March-29 June 2022
               </h5>
               <ul>
                 <li>
@@ -147,9 +168,9 @@ function ExperienceSect() {
             </div>
             <div className="listİmg">
               <img
-                src="/images/eteration-logo.jpg"
+                src={EterationLogo}
                 alt="logo"
-                data-src="/images/eteration-logo.jpg"
+                data-src={EterationLogo}
                 loading="lazy"
               />
             </div>
