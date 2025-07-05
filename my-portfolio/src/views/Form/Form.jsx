@@ -8,7 +8,7 @@ import "./styleForm.css";
 function successToast() {
   toast.success("Başarılı Şekilde Gönderildi", {
     position: "bottom-right",
-    autoClose: 2000,
+    autoClose: 5000,
     hideProgressBar: false,
     closeOnClick: true,
     pauseOnHover: true,
@@ -20,7 +20,7 @@ function successToast() {
 function successInfoToast(name, surname) {
   toast.success(`Gönderilen kişi:${name} ${surname}`, {
     position: "bottom-right",
-    autoClose: 2000,
+    autoClose: 5000,
     hideProgressBar: false,
     closeOnClick: true,
     pauseOnHover: true,
@@ -32,7 +32,7 @@ function successInfoToast(name, surname) {
 function errorToast(error) {
   toast.error(`${error.message}`, {
     position: "bottom-right",
-    autoClose: 2000,
+    autoClose: 5000,
     hideProgressBar: false,
     closeOnClick: true,
     pauseOnHover: true,
@@ -103,6 +103,7 @@ function Form() {
           id="name"
           className="nameInput"
           type="text"
+          placeholder="exp:selim"
         />
         {isError && errors.name && (
           <p className="errorText">
@@ -120,6 +121,7 @@ function Form() {
           id="surname"
           className="nameInput"
           type="text"
+          placeholder="exp:eminoğlu"
         />
         {isError && errors.surname && (
           <p className="errorText">
@@ -137,6 +139,7 @@ function Form() {
           id="email"
           className="nameInput"
           type="email"
+          placeholder="exp:selim@gmail.com"
         />
         {isError && errors.email && (
           <p className="errorText">

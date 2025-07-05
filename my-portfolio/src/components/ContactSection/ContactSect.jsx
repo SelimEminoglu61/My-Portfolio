@@ -35,31 +35,6 @@ function ContactSect() {
         <div className="midTitleDiv">
           <h3>Contact Me</h3>
         </div>
-        <ul className="infoList">
-          <li>
-            <img
-              src="/icons/whatsapp.png"
-              alt="icon"
-              data-src="/icons/whatsapp.png"
-              loading="lazy"
-            />
-            <p>+90545 532 81 11</p>
-          </li>
-          <li>
-            <img
-              src="/icons/linkedin.png"
-              alt="icon"
-              data-src="/icons/linkedin.png"
-              loading="lazy"
-            />
-            <a
-              href="https://www.linkedin.com/in/selim-eminoglu/"
-              target="_blank"
-            >
-              Selim Eminoğlu
-            </a>
-          </li>
-        </ul>
         <Form />
       </div>
     </div>

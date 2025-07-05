@@ -4,9 +4,7 @@ form {
   justify-content: center;
   border: 3px solid #eee;
   border-radius: 10px;
-  margin-bottom: 2rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 2rem auto;
   width: 400px;
   gap: 1.5rem;
   padding-top: 1rem;
@@ -14,6 +12,8 @@ form {
 }
 form > h3 {
   text-align: center;
+  color: #fff;
+  font-size: 18pt;
 }
 form > div {
   margin-left: 4rem;
@@ -25,10 +25,13 @@ form > div {
   display: flex;
 }
 .submitBtn {
-  width: 100px;
-  height: 30px;
-  background-color: #eee;
-  color: #053b50;
+  width: 150px;
+  height: 40px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  background-color: #053b50;
+  color: #fff;
+  font-size: 14pt;
   margin-right: auto;
   margin-left: auto;
   cursor: pointer;
