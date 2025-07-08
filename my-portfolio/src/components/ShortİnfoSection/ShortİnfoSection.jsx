@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 function ShortİnfoSection() {
   const [myProjects, setMyProjects] = useState([]);
   const [sortType, setSortType] = useState("1");
+  const [errorStatus, setErrorStatus] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -70,7 +71,7 @@ function ShortİnfoSection() {
           setMyProjects(sorted);
         }
       } catch (err) {
-        console.log("hata", err);
+        setErrorStatus(err);
       }
     };
 
@@ -105,29 +106,35 @@ function ShortİnfoSection() {
           </p>
         </div>
         <div className="myProjectsDiv">
-          {myProjects.map((projects, i) => {
-            return (
-              <div key={i} className="projectsLine">
-                <div className="projectİnfo">
-                  <h3>{projects.name.toUpperCase()}</h3>
-                  <p>{projects.description}</p>
-                  <p>Last Update: {projects.updated_at.slice(0, 10)}</p>
-                  <p>
-                    Want to see more{" "}
-                    <a href={projects.html_url} target="_blank">
-                      click
-                    </a>{" "}
-                    here.
-                  </p>
+          {errorStatus != "" ? (
+            <div className="errorDiv">
+              <p>Error:{errorStatus}</p>
+            </div>
+          ) : (
+            myProjects.map((projects, i) => {
+              return (
+                <div key={i} className="projectsLine">
+                  <div className="projectİnfo">
+                    <h3>{projects.name.toUpperCase()}</h3>
+                    <p>{projects.description}</p>
+                    <p>Last Update: {projects.updated_at.slice(0, 10)}</p>
+                    <p>
+                      Want to see more{" "}
+                      <a href={projects.html_url} target="_blank">
+                        click
+                      </a>{" "}
+                      here.
+                    </p>
+                  </div>
+                  <div className="projectNumber">
+                    <p>Forks: {projects.forks}</p>
+                    <p>Watchers: {projects.watchers}</p>
+                    <p>İssues: {projects.open_issues}</p>
+                  </div>
                 </div>
-                <div className="projectNumber">
-                  <p>Forks: {projects.forks}</p>
-                  <p>Watchers: {projects.watchers}</p>
-                  <p>İssues: {projects.open_issues}</p>
-                </div>
-              </div>
-            );
-          })}
+              );
+            })
+          )}
         </div>
       </div>
     </div>

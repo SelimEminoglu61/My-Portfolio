@@ -58,7 +58,7 @@ function Header() {
             </Link>
             <Link to="/experience">
               <img
-                src={telephonePng}
+                src={breifcasePng}
                 alt="hamTelephoneButton"
                 width={20}
                 height={20}
@@ -67,7 +67,7 @@ function Header() {
             </Link>
             <Link to="/contact">
               <img
-                src={breifcasePng}
+                src={telephonePng}
                 alt="hamBriefcaseButton"
                 width={20}
                 height={20}

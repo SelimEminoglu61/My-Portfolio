@@ -47,13 +47,10 @@ form > div {
   margin-top: -1rem;
   margin-left: 4rem;
 }
-@media (max-width: 405px) {
+@media (max-width: 420px) {
   form {
     width: 100%;
   }
-}
-
-@media (max-width: 274px) {
   form > div {
     margin-left: 2rem;
   }

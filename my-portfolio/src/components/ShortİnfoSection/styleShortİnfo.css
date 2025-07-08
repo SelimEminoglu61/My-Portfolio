@@ -43,6 +43,22 @@
   cursor: pointer;
 }
 
+.errorDiv {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.errorDiv > p {
+  width: max-content;
+  border: 3px solid #053b50;
+  border-radius: 15px;
+  color: #fff;
+  background-color: #053b50;
+  padding: 1em 0.5em;
+  font-size: 15pt;
+}
+
 .myProjectsDiv {
   display: flex;
   flex-direction: column;
@@ -53,6 +69,7 @@
 .projectsLine {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   position: relative;
 }
@@ -94,6 +111,7 @@
   border-radius: 20px;
   border: 3px solid gray;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -145,4 +163,54 @@
 .projectNumber:not(:hover) {
   transition: 1s;
   transform: scale(1);
+}
+
+@media (max-width: 1030px) {
+  .projectİnfo > h3 {
+    font-size: 12pt;
+  }
+}
+
+@media (max-width: 890px) {
+  .projectİnfo > h3 {
+    font-size: 10pt;
+  }
+  .projectİnfo > p {
+    font-size: 10pt;
+  }
+}
+
+@media (max-width: 750px) {
+  .projectİnfo > h3 {
+    font-size: 14pt;
+  }
+  .projectİnfo > p {
+    font-size: 14pt;
+  }
+  .projectsLine {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .projectsLine::after {
+    width: 90%;
+    height: 0;
+    bottom: -25px;
+  }
+  .projectsLine:last-child:after {
+    width: 0;
+    border: none;
+  }
+  .projectsLine:nth-child(n + 2):before {
+    width: 0;
+    height: 0;
+    border: none;
+  }
+  .projectİnfo {
+    width: 90%;
+  }
+  .projectNumber {
+    width: 90%;
+    padding: 2em 0;
+  }
 }
