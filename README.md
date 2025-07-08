@@ -41,6 +41,10 @@ Selim Eminoğlu adına bilgileri,deneyimleri,yetenekleri veya projeleri hakkınd
 - **Nodemailer**:Nodemailer, bize backend üzerinden mail atma işlemi yapabileceğimiz araçları ve ayarları sunan kütüphanedir.
 
 - **Nodemon**:Nodemon, backend uygulamamız için değişiklik yaptığımızda bu değişikliği direkt olarak server çalışırken uygulayan bir kütüphanedir. Özellikle geliştirme aşamasında her değişiklik için tekrar server başlatmanın önüne geçer.
+  
+- **Dotenv**:Dotenv, bize önemli bilgileri saklamak için env dosyası kullanımında yardımcı olur.
+
+- **Octokit**:Bu kütüphane bize API üzerinden bilgileri çekmek için istek atarken yardımcı olur.
 
 ### Genel Özellikler (V 1.0.0)
 
@@ -54,6 +58,17 @@ Selim Eminoğlu adına bilgileri,deneyimleri,yetenekleri veya projeleri hakkınd
 
 - Bazı başlıklar ,butonlar ve scroll üzerinde animasyonlar bulunmaktadır.
 
-- Proje için önerilerinizi bekliyorum.
+- Proje için yapıcı önerilerinizi ve görüşlerinizi bekliyorum.
 
-- Projenin diğer versiyonları için takip etmeyi unutmayın !!!
+### Güncelleme (V 2.0.0)
+---
+
+- SPA sürümünden çoklu sayfa sürümüne geçildi.
+
+- Projede olan bazı animasyonlar güncellendi.
+
+- Hamburger menü güncellendi.
+
+- Görünen bilgilere veya yeteneklere erişmek için link eklendi.
+
+- Eğitim bilgisi ve projeler kısmı eklendi.
