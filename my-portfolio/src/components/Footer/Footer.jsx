@@ -37,7 +37,7 @@ function Footer() {
               <h3>Social Media</h3>
               <ul>
                 <li>
-                  <img src={instaPng} alt="instaLogo" />
+                  <img src={instaPng} alt="instaLogo" loading="lazy" />
                   <a
                     href="https://www.instagram.com/selimeminoglu/"
                     target="_blank"
@@ -46,13 +46,13 @@ function Footer() {
                   </a>
                 </li>
                 <li>
-                  <img src={twitPng} alt="twitLogo" />
+                  <img src={twitPng} alt="twitLogo" loading="lazy" />
                   <a href="https://x.com/SelimEminolu3" target="_blank">
                     Twitter
                   </a>
                 </li>
                 <li>
-                  <img src={facePng} alt="faceLogo" />
+                  <img src={facePng} alt="faceLogo" loading="lazy" />
                   <a
                     href="https://www.facebook.com/selim.eminoglu.92?locale=tr_TR"
                     target="_blank"
@@ -66,13 +66,13 @@ function Footer() {
               <h3>Business</h3>
               <ul>
                 <li>
-                  <img src={githubPng} alt="githubLogo" />
+                  <img src={githubPng} alt="githubLogo" loading="lazy" />
                   <a href="https://github.com/SelimEminoglu61" target="_blank">
                     Github
                   </a>
                 </li>
                 <li>
-                  <img src={linkedPng} alt="linkedinLogo" />
+                  <img src={linkedPng} alt="linkedinLogo" loading="lazy" />
                   <a
                     href="https://www.linkedin.com/in/selim-eminoglu/"
                     target="_blank"
@@ -81,7 +81,7 @@ function Footer() {
                   </a>
                 </li>
                 <li>
-                  <img src={wpPng} alt="wpLogo" />
+                  <img src={wpPng} alt="wpLogo" loading="lazy" />
                   <a href={`https://wa.me/${myNumber}`} target="_blank">
                     {myNumberError != "" ? (
                       <p>Not Found Number</p>
