@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
-import ppCV from "../../assets/images/pp-cv.webp";
-import RightArrow from "../../assets/icons/right-arrow.png";
+import ppCV from "/images/pp-cv.webp";
+import RightArrow from "/icons/right-arrow.webp";
 
 import "./styleAboutSect.css";
 import "../../assets/css/style.css";
@@ -98,9 +98,9 @@ function AboutSect() {
         <ul className="skillList">
           <li>
             <img
-              src="/icons/html-5.png"
+              src="/icons/html-5.webp"
               alt="icon"
-              data-src="/icons/html-5.png"
+              data-src="/icons/html-5.webp"
               loading="lazy"
             />
             <h4>
@@ -111,9 +111,9 @@ function AboutSect() {
           </li>
           <li>
             <img
-              src="/icons/css-3.png"
+              src="/icons/css-3.webp"
               alt="icon"
-              data-src="/icons/css-3.png"
+              data-src="/icons/css-3.webp"
               loading="lazy"
             />
             <h4>
@@ -124,9 +124,9 @@ function AboutSect() {
           </li>
           <li>
             <img
-              src="/icons/js.png"
+              src="/icons/js.webp"
               alt="icon"
-              data-src="/icons/js.png"
+              data-src="/icons/js.webp"
               loading="lazy"
             />
             <h4>
@@ -140,9 +140,9 @@ function AboutSect() {
           </li>
           <li>
             <img
-              src="/icons/physics.png"
+              src="/icons/physics.webp"
               alt="icon"
-              data-src="/icons/physics.png"
+              data-src="/icons/physics.webp"
               loading="lazy"
             />
             <h4>
@@ -153,9 +153,9 @@ function AboutSect() {
           </li>
           <li>
             <img
-              src="/icons/python.png"
+              src="/icons/python.webp"
               alt="icon"
-              data-src="/icons/python.png"
+              data-src="/icons/python.webp"
               loading="lazy"
             />
             <h4>
@@ -166,9 +166,9 @@ function AboutSect() {
           </li>
           <li>
             <img
-              src="/icons/sass.png"
+              src="/icons/sass.webp"
               alt="icon"
-              data-src="/icons/sass.png"
+              data-src="/icons/sass.webp"
               loading="lazy"
             />
             <h4>
@@ -179,9 +179,9 @@ function AboutSect() {
           </li>
           <li>
             <img
-              src="/icons/bootstrap.png"
+              src="/icons/bootstrap.webp"
               alt="icon"
-              data-src="/icons/bootstrap.png"
+              data-src="/icons/bootstrap.webp"
               loading="lazy"
             />
             <h4>
@@ -192,9 +192,9 @@ function AboutSect() {
           </li>
           <li>
             <img
-              src="/icons/structure.png"
+              src="/icons/structure.webp"
               alt="icon"
-              data-src="/icons/structure.png"
+              data-src="/icons/structure.webp"
               loading="lazy"
             />
             <h4>

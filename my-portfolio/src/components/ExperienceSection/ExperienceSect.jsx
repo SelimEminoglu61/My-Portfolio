@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 
-import listArrow from "../../assets/icons/list-arrow.png";
-import arvisLogo from "../../assets/images/arvis.png";
-import EterationLogo from "../../assets/images/eteration.png";
+import listArrow from "/icons/list-arrow.webp";
+import arvisLogo from "/images/arvis.webp";
+import EterationLogo from "/images/eteration.webp";
 import "./styleExperienceSect.css";
 import "../../assets/css/style.css";
 
@@ -128,9 +128,9 @@ function ExperienceSect() {
             </div>
             <div className="listİmg">
               <img
-                src="/images/khenda-logo.jpg"
+                src="/images/khenda-logo.webp"
                 alt="logo"
-                data-src="/images/khenda-logo.jpg"
+                data-src="/images/khenda-logo.webp"
                 loading="lazy"
               />
             </div>

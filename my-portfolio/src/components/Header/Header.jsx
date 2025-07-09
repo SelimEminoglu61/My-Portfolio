@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router";
 import "./styleHeader.css";
-import homePng from "../../assets/icons/home.png";
-import userPng from "../../assets/icons/user.png";
-import telephonePng from "../../assets/icons/telephone.png";
-import breifcasePng from "../../assets/icons/briefcase.png";
+import homePng from "/icons/home.webp";
+import userPng from "/icons/user.webp";
+import telephonePng from "/icons/telephone.webp";
+import breifcasePng from "/icons/briefcase.webp";
 
 function Header() {
   const [onClickMenu, setOnClickMenu] = useState(false);

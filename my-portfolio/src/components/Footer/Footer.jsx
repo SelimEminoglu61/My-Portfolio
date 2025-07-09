@@ -3,12 +3,12 @@ import { useEffect, useState } from "react";
 import "./styleFooter.css";
 import "../../assets/css/style.css";
 
-import instaPng from "../../assets/icons/instagram.png";
-import twitPng from "../../assets/icons/twitter.png";
-import facePng from "../../assets/icons/facebook.png";
-import githubPng from "../../assets/icons/github_small.png";
-import linkedPng from "../../assets/icons/linkedin_small.png";
-import wpPng from "../../assets/icons/whatsapp_small.png";
+import instaPng from "/icons/instagram.webp";
+import twitPng from "/icons/twitter.webp";
+import facePng from "/icons/facebook.webp";
+import githubPng from "/icons/github_small.webp";
+import linkedPng from "/icons/linkedin_small.webp";
+import wpPng from "/icons/whatsapp_small.webp";
 
 function Footer() {
   const [myNumber, setMyNumber] = useState("");

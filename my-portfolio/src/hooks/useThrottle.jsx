@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { throttle } from "../utils/throttle";
 
-import topArrow from "../assets/icons/top-arrow.png";
+import topArrow from "/icons/top-arrow.webp";
 
 function useThrottle() {
   const [showButton, setShowButton] = useState(false);

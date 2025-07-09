@@ -106,7 +106,7 @@
 .projectİnfo {
   width: 45%;
   height: 300px;
-  background: url("../../assets/images/blur_bg.png");
+  background: url("/images/blur_bg.webp");
   opacity: 0.8;
   border-radius: 20px;
   border: 3px solid gray;
@@ -138,7 +138,7 @@
 }
 
 .projectNumber {
-  background: url("../../assets/images/blur_bg.png");
+  background: url("/images/blur_bg.webp");
   opacity: 0.8;
   border-radius: 20px;
   border: 3px solid gray;

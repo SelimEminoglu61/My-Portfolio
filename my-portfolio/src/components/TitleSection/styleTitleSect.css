@@ -2,7 +2,7 @@
 
 .backgroundTitle {
   background-size: 50%;
-  background-image: url("../../assets/images/backgr-2.jpeg");
+  background-image: url("/images/backgr-2.webp");
   min-height: 590px;
   display: flex;
   justify-content: center;
@@ -103,7 +103,7 @@
 
 .imgDiv {
   width: 50%;
-  background-image: url("../../assets/images/foto-0.png");
+  background-image: url("/images/foto-0.webp");
   background-size: cover;
   animation-name: blur-radius;
   animation-duration: 2s;

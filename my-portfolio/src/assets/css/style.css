@@ -19,7 +19,7 @@ my colors
 }
 
 .background {
-  background-image: url("../images/backgr-0.jpeg");
+  background-image: url("/images/backgr-0.webp");
   background-size: 30%;
   background-position: center;
   min-height: 100vh;

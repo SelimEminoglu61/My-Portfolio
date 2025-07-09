@@ -1,6 +1,6 @@
 import "./styleBottomArrow.css";
 import "../../assets/css/style.css";
-import downİcon from "../../assets/icons/icon-down.png";
+import downİcon from "/icons/icon-down.webp";
 
 function BottomArrow() {
   return (
