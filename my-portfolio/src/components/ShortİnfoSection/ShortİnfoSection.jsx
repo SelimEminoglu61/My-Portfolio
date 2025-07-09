@@ -10,7 +10,9 @@ function ShortİnfoSection() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/myprojects");
+        const response = await fetch(
+          "https://my-portfolio-fggu.onrender.com/api/myprojects"
+        );
         const data = await response.json();
 
         if (sortType == "1") {

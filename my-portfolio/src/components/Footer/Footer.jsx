@@ -12,15 +12,18 @@ import wpPng from "../../assets/icons/whatsapp_small.png";
 
 function Footer() {
   const [myNumber, setMyNumber] = useState("");
+  const [myNumberError, setMyNumberError] = useState("");
 
   useEffect(() => {
     const fetchNumber = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/contact");
+        const response = await fetch(
+          "https://my-portfolio-fggu.onrender.com/api/contact"
+        );
         const data = await response.json();
         setMyNumber(data);
       } catch (err) {
-        console.log("hata", err);
+        setMyNumberError(err);
       }
     };
   }, []);
@@ -80,7 +83,7 @@ function Footer() {
                 <li>
                   <img src={wpPng} alt="wpLogo" />
                   <a href={`https://wa.me/${myNumber}`} target="_blank">
-                    Whatsapp
+                    {myNumber != "" ? <p>Not Found Number</p> : <p>Whatsapp</p>}
                   </a>
                 </li>
               </ul>
