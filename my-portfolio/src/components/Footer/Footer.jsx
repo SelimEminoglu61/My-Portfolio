@@ -83,7 +83,11 @@ function Footer() {
                 <li>
                   <img src={wpPng} alt="wpLogo" />
                   <a href={`https://wa.me/${myNumber}`} target="_blank">
-                    {myNumber != "" ? <p>Not Found Number</p> : <p>Whatsapp</p>}
+                    {myNumberError != "" ? (
+                      <p>Not Found Number</p>
+                    ) : (
+                      <p>Whatsapp</p>
+                    )}
                   </a>
                 </li>
               </ul>
