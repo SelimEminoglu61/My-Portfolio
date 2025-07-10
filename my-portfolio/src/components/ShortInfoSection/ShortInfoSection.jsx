@@ -1,8 +1,8 @@
-import "./styleShortİnfo.css";
+import "./styleShortInfo.css";
 import "../../assets/css/style.css";
 import { useState, useEffect } from "react";
 
-function ShortİnfoSection() {
+function ShortInfoSection() {
   const [myProjects, setMyProjects] = useState([]);
   const [sortType, setSortType] = useState("1");
   const [errorStatus, setErrorStatus] = useState("");
@@ -144,4 +144,4 @@ function ShortİnfoSection() {
   );
 }
 
-export default ShortİnfoSection;
+export default ShortInfoSection;
