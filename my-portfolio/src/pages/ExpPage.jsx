@@ -1,3 +1,5 @@
+import { lazy, Suspense } from "react";
+
 import Header from "../components/Header/Header";
 import ExperienceSect from "../components/ExperienceSection/ExperienceSect";
 import BottomArrow from "../components/BottomArrow/BottomArrow";
