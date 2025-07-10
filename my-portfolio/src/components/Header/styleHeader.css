@@ -1,4 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap");
+@font-face {
+  font-family: "Montserrat";
+  src: url(../../assets/fonts/montserrat-v30-latin-regular.woff2);
+  font-display: swap;
+  font-weight: 400;
+}
 
 .headerDiv {
   background-color: #053b50;
@@ -65,6 +70,7 @@
   border: 2px solid #000;
   border-radius: 5px;
   padding: 0.5rem 1rem;
+  font-weight: 600;
 }
 
 .navbarList > a {

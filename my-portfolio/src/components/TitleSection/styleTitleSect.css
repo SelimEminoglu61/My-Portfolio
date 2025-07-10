@@ -1,4 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@font-face {
+  font-family: "Inter";
+  src: url(../../assets/fonts/inter-v19-latin-regular.woff2);
+  font-display: swap;
+  font-weight: 400;
+}
 
 .backgroundTitle {
   background-size: 50%;
