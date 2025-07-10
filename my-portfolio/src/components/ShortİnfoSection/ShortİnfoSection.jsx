@@ -90,6 +90,7 @@ function ShortİnfoSection() {
         <div className="midTitleDiv">
           <h3>My Projects</h3>
         </div>
+
         <div className="sortDiv">
           <p>
             Sort:{" "}

@@ -25,6 +25,17 @@ my colors
   min-height: 100vh;
 }
 
+.fallback {
+  border: 2px solid #053b50;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  font-size: 15pt;
+  background-color: #053b50;
+  color: #fff;
+  width: 150px;
+}
+
 .midTitleDiv {
   display: flex;
   justify-content: center;
