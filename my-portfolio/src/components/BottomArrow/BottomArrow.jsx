@@ -12,6 +12,7 @@ function BottomArrow() {
           alt="icon"
           width={100}
           height={100}
+          aria-label="arrow-bottom"
         />
       </div>
     </div>

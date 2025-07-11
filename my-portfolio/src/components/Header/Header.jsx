@@ -49,11 +49,23 @@ function Header() {
         <div className="burgerList">
           <ul>
             <Link to="/">
-              <img src={homePng} alt="hamHomeButton" width={20} height={20} />
+              <img
+                src={homePng}
+                alt="hamHomeButton"
+                width={20}
+                height={20}
+                aria-label="home"
+              />
               <li>Home</li>
             </Link>
             <Link to="/about">
-              <img src={userPng} alt="hamUserButton" width={20} height={20} />
+              <img
+                src={userPng}
+                alt="hamUserButton"
+                width={20}
+                height={20}
+                aria-label="about"
+              />
               <li>About</li>
             </Link>
             <Link to="/experience">
@@ -62,6 +74,7 @@ function Header() {
                 alt="hamTelephoneButton"
                 width={20}
                 height={20}
+                aria-label="experience"
               />
               <li>Experience</li>
             </Link>
@@ -71,6 +84,7 @@ function Header() {
                 alt="hamBriefcaseButton"
                 width={20}
                 height={20}
+                aria-label="contact"
               />
               <li>Contact</li>
             </Link>

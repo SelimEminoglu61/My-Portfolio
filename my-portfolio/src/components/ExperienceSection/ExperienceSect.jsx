@@ -46,6 +46,7 @@ function ExperienceSect() {
                 alt="logo"
                 data-src="/images/turkcell-logo.webp"
                 loading="lazy"
+                aria-label="turkcell"
               />
             </div>
             <div className="listText">
@@ -132,6 +133,7 @@ function ExperienceSect() {
                 alt="logo"
                 data-src="/images/khenda-logo.webp"
                 loading="lazy"
+                aria-label="khenda"
               />
             </div>
           </li>
@@ -142,6 +144,7 @@ function ExperienceSect() {
                 alt="logo"
                 data-src={arvisLogo}
                 loading="lazy"
+                aria-label="arvis"
               />
             </div>
             <div className="listText">
@@ -224,6 +227,7 @@ function ExperienceSect() {
                 alt="logo"
                 data-src={EterationLogo}
                 loading="lazy"
+                aria-label="eteration"
               />
             </div>
           </li>

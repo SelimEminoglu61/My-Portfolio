@@ -56,8 +56,8 @@ function AboutSect() {
               decided to work as front end developer.
             </p>
             <div className="downloadBtt">
-              <a href="/selim-eminoglu-cv.zip">
-                <button>Download My CV</button>
+              <a href="/selim-eminoglu-cv.zip" aria-label="myCv">
+                <button aria-label="myCvButton">Download My CV</button>
               </a>
             </div>
           </div>
@@ -70,7 +70,11 @@ function AboutSect() {
             <img src={RightArrow} alt="rightLogo" />
             <div className="schoolDiv">
               <h3>
-                <a href="https://www.marmara.edu.tr/" target="_blank">
+                <a
+                  href="https://www.marmara.edu.tr/"
+                  target="_blank"
+                  aria-label="myUniversity"
+                >
                   Marmara Unıversity
                 </a>
               </h3>
@@ -83,7 +87,11 @@ function AboutSect() {
             <img src={RightArrow} alt="rightLogo" />
             <div className="schoolDiv">
               <h3>
-                <a href="https://bucaanadolulisesi.meb.k12.tr/" target="_blank">
+                <a
+                  href="https://bucaanadolulisesi.meb.k12.tr/"
+                  target="_blank"
+                  aria-label="myHighSchool"
+                >
                   High School Of Buca Anatolia
                 </a>
               </h3>
@@ -102,6 +110,7 @@ function AboutSect() {
               alt="icon"
               data-src="/icons/html-5.webp"
               loading="lazy"
+              aria-label="html"
             />
             <h4>
               <a href="https://tr.wikipedia.org/wiki/HTML" target="_blank">
@@ -115,6 +124,7 @@ function AboutSect() {
               alt="icon"
               data-src="/icons/css-3.webp"
               loading="lazy"
+              aria-label="css"
             />
             <h4>
               <a href="https://tr.wikipedia.org/wiki/CSS" target="_blank">
@@ -128,6 +138,7 @@ function AboutSect() {
               alt="icon"
               data-src="/icons/js.webp"
               loading="lazy"
+              aria-label="javascript"
             />
             <h4>
               <a
@@ -144,6 +155,7 @@ function AboutSect() {
               alt="icon"
               data-src="/icons/physics.webp"
               loading="lazy"
+              aria-label="react"
             />
             <h4>
               <a href="https://react.dev/" target="_blank">
@@ -157,6 +169,7 @@ function AboutSect() {
               alt="icon"
               data-src="/icons/python.webp"
               loading="lazy"
+              aria-label="python"
             />
             <h4>
               <a href="https://www.python.org/" target="_blank">
@@ -170,6 +183,7 @@ function AboutSect() {
               alt="icon"
               data-src="/icons/sass.webp"
               loading="lazy"
+              aria-label="sass"
             />
             <h4>
               <a href="https://sass-lang.com/" target="_blank">
@@ -183,6 +197,7 @@ function AboutSect() {
               alt="icon"
               data-src="/icons/bootstrap.webp"
               loading="lazy"
+              aria-label="bootstrap"
             />
             <h4>
               <a href="https://getbootstrap.com/" target="_blank">
@@ -196,6 +211,7 @@ function AboutSect() {
               alt="icon"
               data-src="/icons/structure.webp"
               loading="lazy"
+              aria-label="react-native"
             />
             <h4>
               <a href="https://reactnative.dev/" target="_blank">
