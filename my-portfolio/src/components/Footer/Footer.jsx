@@ -39,7 +39,7 @@ function Footer() {
                 <li>
                   <img
                     src={instaPng}
-                    alt="instaLogo"
+                    alt="Logo"
                     loading="lazy"
                     aria-label="instagram"
                   />
@@ -53,7 +53,7 @@ function Footer() {
                 <li>
                   <img
                     src={twitPng}
-                    alt="twitLogo"
+                    alt="Logo"
                     loading="lazy"
                     aria-label="twitter"
                   />
@@ -64,7 +64,7 @@ function Footer() {
                 <li>
                   <img
                     src={facePng}
-                    alt="faceLogo"
+                    alt="Logo"
                     loading="lazy"
                     aria-label="facebook"
                   />
@@ -83,7 +83,7 @@ function Footer() {
                 <li>
                   <img
                     src={githubPng}
-                    alt="githubLogo"
+                    alt="Logo"
                     loading="lazy"
                     aria-label="github"
                   />
@@ -94,7 +94,7 @@ function Footer() {
                 <li>
                   <img
                     src={linkedPng}
-                    alt="linkedinLogo"
+                    alt="Logo"
                     loading="lazy"
                     aria-label="linkedin"
                   />
@@ -108,7 +108,7 @@ function Footer() {
                 <li>
                   <img
                     src={wpPng}
-                    alt="wpLogo"
+                    alt="Logo"
                     loading="lazy"
                     aria-label="whatsapp"
                   />

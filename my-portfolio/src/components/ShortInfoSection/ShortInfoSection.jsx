@@ -6,9 +6,11 @@ function ShortInfoSection() {
   const [myProjects, setMyProjects] = useState([]);
   const [sortType, setSortType] = useState("1");
   const [errorStatus, setErrorStatus] = useState("");
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
+      setLoading(true);
       try {
         const response = await fetch(
           "https://my-portfolio-fggu.onrender.com/api/myprojects"
@@ -74,6 +76,8 @@ function ShortInfoSection() {
         }
       } catch (err) {
         setErrorStatus(err);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -109,6 +113,11 @@ function ShortInfoSection() {
           </p>
         </div>
         <div className="myProjectsDiv">
+          {loading && (
+            <div className="loading">
+              <h4>Yükleniyor...</h4>
+            </div>
+          )}
           {errorStatus != "" ? (
             <div className="errorDiv">
               <p>Error:{errorStatus}</p>
