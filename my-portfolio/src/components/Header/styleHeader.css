@@ -157,7 +157,7 @@
   gap: 1rem;
 }
 
-.burgerList > ul > a {
+.burgerList > ul > li {
   border: 2px solid black;
   display: flex;
   justify-content: center;
@@ -165,24 +165,27 @@
   flex-wrap: wrap;
   height: 50px;
   margin: 3px;
-  text-decoration: none;
-  color: #fff;
   background-color: #64ccc5;
 }
 
-.burgerList > ul > a:hover {
+.burgerList > ul > li:hover {
   transition: 1s;
   border: 2px solid #fff;
   opacity: 0.7;
 }
 
-.burgerList > ul > a > img {
+.burgerList > ul > li > a > img {
   margin-right: 0.5em;
 }
 
-.burgerList > ul > a > li {
+.burgerList > ul > li > a {
   padding-top: 0.1em;
-  font-size: 18px;
+  font-size: 20px;
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
 }
 
 @media (max-width: 307px) {

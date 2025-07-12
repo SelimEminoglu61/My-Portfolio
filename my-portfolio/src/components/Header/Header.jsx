@@ -48,46 +48,54 @@ function Header() {
       {isOpenMenu && (
         <div className="burgerList">
           <ul>
-            <Link to="/">
-              <img
-                src={homePng}
-                alt="hamHomeButton"
-                width={20}
-                height={20}
-                aria-label="home"
-              />
-              <li>Home</li>
-            </Link>
-            <Link to="/about">
-              <img
-                src={userPng}
-                alt="hamUserButton"
-                width={20}
-                height={20}
-                aria-label="about"
-              />
-              <li>About</li>
-            </Link>
-            <Link to="/experience">
-              <img
-                src={breifcasePng}
-                alt="hamTelephoneButton"
-                width={20}
-                height={20}
-                aria-label="experience"
-              />
-              <li>Experience</li>
-            </Link>
-            <Link to="/contact">
-              <img
-                src={telephonePng}
-                alt="hamBriefcaseButton"
-                width={20}
-                height={20}
-                aria-label="contact"
-              />
-              <li>Contact</li>
-            </Link>
+            <li>
+              <Link to="/">
+                <img
+                  src={homePng}
+                  alt="hamHomeButton"
+                  width={20}
+                  height={20}
+                  aria-label="home"
+                />
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/about">
+                <img
+                  src={userPng}
+                  alt="hamUserButton"
+                  width={20}
+                  height={20}
+                  aria-label="about"
+                />
+                About
+              </Link>
+            </li>
+            <li>
+              <Link to="/experience">
+                <img
+                  src={breifcasePng}
+                  alt="hamTelephoneButton"
+                  width={20}
+                  height={20}
+                  aria-label="experience"
+                />
+                Experience
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact">
+                <img
+                  src={telephonePng}
+                  alt="hamBriefcaseButton"
+                  width={20}
+                  height={20}
+                  aria-label="contact"
+                />
+                Contact
+              </Link>
+            </li>
           </ul>
         </div>
       )}
