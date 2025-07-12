@@ -101,6 +101,7 @@ function ShortInfoSection() {
             <select
               className="sortSelect"
               name="sortSelect"
+              id="sortSelect"
               onChange={handleSelect}
             >
               <option value="1">Update Time(Close to Far)</option>
