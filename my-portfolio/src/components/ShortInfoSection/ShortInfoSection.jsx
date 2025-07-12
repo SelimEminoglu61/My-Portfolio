@@ -97,7 +97,7 @@ function ShortInfoSection() {
 
         <div className="sortDiv">
           <p>
-            <label for="sortSelect">Sort:</label>
+            <label htmlFor="sortSelect">Sort:</label>
             <select
               className="sortSelect"
               name="sortSelect"
