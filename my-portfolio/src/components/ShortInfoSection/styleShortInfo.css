@@ -35,7 +35,7 @@
 
 .sortDiv > p {
   font-weight: 700;
-  color: #fff;
+  color: #2e2e2e;
   font-size: 26px;
   display: flex;
   align-items: center;
@@ -47,7 +47,7 @@
   border-radius: 20px;
   padding: 0.5em 1em 0.5em 1em;
   background-color: #64ccc5;
-  color: #fff;
+  color: #c7c7c7;
   font-size: medium;
   font-weight: 600;
 }

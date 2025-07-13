@@ -6,9 +6,8 @@
 
 /*
 my colors
-#eee --white
+#fff --white
 #64ccc5 --light blue
-#1F5B56 -- contrast light blue
 #053b50 -- dark blue
 #000 -- black
 */
@@ -33,7 +32,7 @@ my colors
   justify-content: center;
   font-size: 15pt;
   background-color: #053b50;
-  color: #fff;
+  color: #c7c7c7;
   width: 150px;
 }
 
@@ -44,7 +43,7 @@ my colors
 
 .midTitleDiv > h3 {
   font-size: 32pt;
-  color: #eee;
+  color: #2e2e2e;
 }
 
 @media (max-width: 600px) {
