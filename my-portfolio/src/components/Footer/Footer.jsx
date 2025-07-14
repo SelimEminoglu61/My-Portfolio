@@ -37,12 +37,7 @@ function Footer() {
               <h3>Social Media</h3>
               <ul>
                 <li>
-                  <img
-                    src={instaPng}
-                    alt="MyİnstaAdress"
-                    loading="lazy"
-                    aria-label="instagram"
-                  />
+                  <img src={instaPng} alt="" loading="lazy" />
                   <a
                     href="https://www.instagram.com/selimeminoglu/"
                     target="_blank"
@@ -51,23 +46,13 @@ function Footer() {
                   </a>
                 </li>
                 <li>
-                  <img
-                    src={twitPng}
-                    alt="MyTwitAdress"
-                    loading="lazy"
-                    aria-label="twitter"
-                  />
+                  <img src={twitPng} alt="" loading="lazy" />
                   <a href="https://x.com/SelimEminolu3" target="_blank">
                     Twitter
                   </a>
                 </li>
                 <li>
-                  <img
-                    src={facePng}
-                    alt="MyFaceAdress"
-                    loading="lazy"
-                    aria-label="facebook"
-                  />
+                  <img src={facePng} alt="" loading="lazy" />
                   <a
                     href="https://www.facebook.com/selim.eminoglu.92?locale=tr_TR"
                     target="_blank"
@@ -81,23 +66,13 @@ function Footer() {
               <h3>Business</h3>
               <ul>
                 <li>
-                  <img
-                    src={githubPng}
-                    alt="MyGitAdress"
-                    loading="lazy"
-                    aria-label="github"
-                  />
+                  <img src={githubPng} alt="" loading="lazy" />
                   <a href="https://github.com/SelimEminoglu61" target="_blank">
                     Github
                   </a>
                 </li>
                 <li>
-                  <img
-                    src={linkedPng}
-                    alt="MyLinkAdress"
-                    loading="lazy"
-                    aria-label="linkedin"
-                  />
+                  <img src={linkedPng} alt="" loading="lazy" />
                   <a
                     href="https://www.linkedin.com/in/selim-eminoglu/"
                     target="_blank"
@@ -106,12 +81,7 @@ function Footer() {
                   </a>
                 </li>
                 <li>
-                  <img
-                    src={wpPng}
-                    alt="MyWpAdress"
-                    loading="lazy"
-                    aria-label="whatsapp"
-                  />
+                  <img src={wpPng} alt="" loading="lazy" />
                   <a href={`https://wa.me/${myNumber}`} target="_blank">
                     {myNumberError != "" ? (
                       <p>Not Found Number</p>

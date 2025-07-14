@@ -46,58 +46,34 @@ function Header() {
         onClick={() => isOpenHamMenu()}
       ></div>
       {isOpenMenu && (
-        <div className="burgerList">
-          <ul>
+        <nav className="burgerList" aria-label="Ana Menü">
+          <ul aria-hidden={!isOpenMenu}>
             <li>
               <Link to="/">
-                <img
-                  src={homePng}
-                  alt="hamHomeButton"
-                  width={20}
-                  height={20}
-                  aria-label="home"
-                />
+                <img src={homePng} alt="" width={20} height={20} />
                 Home
               </Link>
             </li>
             <li>
               <Link to="/about">
-                <img
-                  src={userPng}
-                  alt="hamUserButton"
-                  width={20}
-                  height={20}
-                  aria-label="about"
-                />
+                <img src={userPng} alt="" width={20} height={20} />
                 About
               </Link>
             </li>
             <li>
               <Link to="/experience">
-                <img
-                  src={breifcasePng}
-                  alt="hamTelephoneButton"
-                  width={20}
-                  height={20}
-                  aria-label="experience"
-                />
+                <img src={breifcasePng} alt="" width={20} height={20} />
                 Experience
               </Link>
             </li>
             <li>
               <Link to="/contact">
-                <img
-                  src={telephonePng}
-                  alt="hamBriefcaseButton"
-                  width={20}
-                  height={20}
-                  aria-label="contact"
-                />
+                <img src={telephonePng} alt="" width={20} height={20} />
                 Contact
               </Link>
             </li>
           </ul>
-        </div>
+        </nav>
       )}
     </div>
   );

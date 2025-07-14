@@ -43,17 +43,16 @@
 }
 
 .sortSelect {
-  border: 2px solid #053b50;
+  border: 2px solid #2e2e2e;
   border-radius: 20px;
   padding: 0.5em 1em 0.5em 1em;
   background-color: #64ccc5;
-  color: #c7c7c7;
+  color: #2e2e2e;
   font-size: medium;
   font-weight: 600;
 }
 
 .sortSelect:hover {
-  background-color: #053b50;
   cursor: pointer;
 }
 
