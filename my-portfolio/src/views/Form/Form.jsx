@@ -63,15 +63,24 @@ async function postMailInfo(url, data) {
     }
   } catch (error) {
     errorToast(error);
+    return null;
   }
 }
 
 const onSubmit = async (values, actions) => {
-  postMailInfo("https://my-portfolio-fggu.onrender.com/", values).then(
-    (response) => {
+  try {
+    const response = await postMailInfo(
+      "https://my-portfolio-fggu.onrender.com/",
+      values
+    );
+    console.log("Yanıt:", response);
+
+    if (response?.name && response?.surname) {
       successInfoToast(response.name, response.surname);
     }
-  );
+  } catch (err) {
+    console.log("Form gönderiminde hata:", err);
+  }
 
   await new Promise((resolve) => {
     setTimeout(resolve, 1000);
