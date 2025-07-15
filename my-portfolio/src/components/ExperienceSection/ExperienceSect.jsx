@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-
 import listArrow from "/icons/list-arrow.webp";
 import arvisLogo from "/images/arvis.webp";
 import EterationLogo from "/images/eteration.webp";
@@ -7,31 +5,6 @@ import "./styleExperienceSect.css";
 import "../../assets/css/style.css";
 
 function ExperienceSect() {
-  useEffect(() => {
-    const images = document.querySelectorAll('img[loading="lazy"]');
-
-    if ("IntersectionObserver" in window) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const img = entry.target;
-            img.src = img.dataset.src;
-            img.removeAttribute("loading");
-            observer.unobserve(img);
-          }
-        });
-      });
-
-      images.forEach((img) => {
-        observer.observe(img);
-      });
-    } else {
-      images.forEach((img) => {
-        img.src = img.dataset.src;
-        img.removeAttribute("loading");
-      });
-    }
-  }, []);
   return (
     <div className="container">
       <div className="experienceDiv" id="experience">
