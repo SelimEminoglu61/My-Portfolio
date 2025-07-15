@@ -1,11 +1,13 @@
 import { useFormik } from "formik";
 import { basicSchema } from "../../schema";
 import { useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
+
 import "react-toastify/dist/ReactToastify.css";
 import "./styleForm.css";
 
 function successToast() {
+  console.log("Toast tetikleniyor:", response.name);
   toast.success("Başarılı Şekilde Gönderildi", {
     position: "bottom-right",
     autoClose: 5000,
@@ -65,7 +67,7 @@ async function postMailInfo(url, data) {
 }
 
 const onSubmit = async (values, actions) => {
-  postMailInfo("https://my-portfolio-backend-three.vercel.app/", values).then(
+  postMailInfo("https://my-portfolio-fggu.onrender.com/", values).then(
     (response) => {
       successInfoToast(response.name, response.surname);
     }
@@ -92,7 +94,6 @@ function Form() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <ToastContainer />
       <h3>Send Mail To Me</h3>
       <div>
         <label htmlFor="name">Your Name:</label>
@@ -107,7 +108,7 @@ function Form() {
         />
         {isError && errors.name && (
           <p className="errorText">
-            <img src="/icons/warning.png" alt="icon" />
+            <img src="/icons/warning.webp" alt="icon" />
             {errors.name}
           </p>
         )}
@@ -125,7 +126,7 @@ function Form() {
         />
         {isError && errors.surname && (
           <p className="errorText">
-            <img src="/icons/warning.png" alt="icon" />
+            <img src="/icons/warning.webp" alt="icon" />
             {errors.surname}
           </p>
         )}
@@ -143,7 +144,7 @@ function Form() {
         />
         {isError && errors.email && (
           <p className="errorText">
-            <img src="/icons/warning.png" alt="icon" />
+            <img src="/icons/warning.webp" alt="icon" />
             {errors.email}
           </p>
         )}
@@ -165,7 +166,7 @@ function Form() {
       </div>
       {isError && errors.message && (
         <p className="errorText messageError">
-          <img src="/icons/warning.png" alt="icon" />
+          <img src="/icons/warning.webp" alt="icon" />
           {errors.message}
         </p>
       )}
