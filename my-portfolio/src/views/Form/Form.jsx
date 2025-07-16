@@ -7,7 +7,6 @@ import "react-toastify/dist/ReactToastify.css";
 import "./styleForm.css";
 
 function successToast() {
-  console.log("Toast tetikleniyor:", response.name);
   toast.success("Başarılı Şekilde Gönderildi", {
     position: "bottom-right",
     autoClose: 5000,
@@ -54,39 +53,16 @@ async function postMailInfo(url, data) {
       body: JSON.stringify(data),
     });
 
-    if (response.ok) {
-      successToast();
-      const jsonData = await response.json();
-      return jsonData;
-    } else {
-      throw new Error(response.status);
-    }
+    if (!response.ok) throw new Error(`Sunucu hatası: ${response.status}`);
+
+    const jsonData = await response.json();
+    successToast();
+    return jsonData;
   } catch (error) {
     errorToast(error);
     return null;
   }
 }
-
-const onSubmit = async (values, actions) => {
-  try {
-    const response = await postMailInfo(
-      "https://my-portfolio-fggu.onrender.com/",
-      values
-    );
-    console.log("Yanıt:", response);
-
-    if (response?.name && response?.surname) {
-      successInfoToast(response.name, response.surname);
-    }
-  } catch (err) {
-    console.log("Form gönderiminde hata:", err);
-  }
-
-  await new Promise((resolve) => {
-    setTimeout(resolve, 1000);
-  });
-  actions.resetForm();
-};
 
 function Form() {
   const [isError, setIsError] = useState(false);
@@ -98,7 +74,32 @@ function Form() {
       message: "",
     },
     validationSchema: basicSchema,
-    onSubmit,
+    onSubmit: async (values, actions) => {
+      if (Object.keys(errors).length > 0) {
+        setIsError(true);
+        return;
+      } else {
+        setIsError(false);
+      }
+      try {
+        const response = await postMailInfo(
+          "https://my-portfolio-fggu.onrender.com/",
+          values
+        );
+        console.log("Yanıt:", response);
+
+        if (response?.name && response?.surname) {
+          successInfoToast(response.name, response.surname);
+        }
+      } catch (err) {
+        console.log("Form gönderiminde hata:", err);
+      }
+
+      await new Promise((resolve) => {
+        setTimeout(resolve, 1000);
+      });
+      actions.resetForm();
+    },
   });
 
   return (
@@ -179,18 +180,7 @@ function Form() {
           {errors.message}
         </p>
       )}
-      <input
-        className="submitBtn"
-        value="Send Mail"
-        type="submit"
-        onClick={() => {
-          if (errors) {
-            setIsError(true);
-          } else {
-            setIsError(false);
-          }
-        }}
-      />
+      <input className="submitBtn" value="Send Mail" type="submit" />
     </form>
   );
 }
