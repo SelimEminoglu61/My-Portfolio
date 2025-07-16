@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import { lazy, Suspense } from "react";
 
 import BottomArrow from "../components/BottomArrow/BottomArrow";
 import ContactSect from "../components/ContactSection/ContactSect";
