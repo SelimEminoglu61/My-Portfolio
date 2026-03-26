@@ -11,6 +11,7 @@ Modern, responsive ve kullanıcı odaklı bir kişisel portfolyo sitesi. React i
 * Ana Sayfa
   ![Ana Sayfa](./screenshots/ana-ekran.png)
 * Mobil Görünüm
+---
   ![Mobil](./screenshots/mobil.png)
 * Projeler Bölümü
   ![Projeler](./screenshots/projeler.png)
